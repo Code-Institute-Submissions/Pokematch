@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokémon match</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
-<body>
-    <div id="title">
-        <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/200814/f80b4c9c3829adcd5b9853ee2f0644b3.png" alt="pokemon-font" border="0"></a>
-        <h1>Matching Pairs</h1>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row title-top-buffer">
+        <div class="col col-centered" id="title">
+          <a href="index.html"
+            ><img
+              src="https://fontmeme.com/permalink/200814/080422ec917271798a3b7c2620fb649b.png"
+              alt="pokemon-font"
+              border="0"
+          /></a>
+          <h1>Matching Pairs</h1>
+        </div>
+      </div>
     </div>
 
-    <div id="league-levels">
-        <h2> Select a League Difficulty </h2>
-        <div class="ball-levels pokeball"></div>
-        <div class="ball-levels greatball"></div>
-        <div class="ball-levels masterball"></div>
-    </div>
+    <div class="container" id="game-box">
+      <div class="container">
+        <div class="row difficulty-top-buffer">
+          <div class="col-12" id="league-levels">
+            <h2>Select a League Difficulty</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-auto ball-levels" id="pokeball"></div>
+          <div class="col-md-auto ball-levels" id="greatball"></div>
+          <div class="col-md-auto ball-levels" id="masterball"></div>
+        </div>
+      </div>
+    
 
-    <div id="game-initiate">
-        <div id="start">
+        <div class="container" id="game-initiate">
+        <div class="row initiate-top-buffer">
+            <div class="col" id="start">
             <h2>Start</h2>
+            </div>
         </div>
-   
-
-        <div id="rules">
+        <div class="row">
+            <div class="col" id="rules">
             <h2>How to Play?</h2>
+            </div>
+        </div>
         </div>
     </div>
-</body>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

@@ -4,14 +4,15 @@ body {
     background-image:url("../../assets/images/grass.png");
     background-repeat:no-repeat;
     background-size:cover;
+    font-family: 'Recursive', sans-serif;
 }
 
 body::after {
   content: "";
-  background-color:black;
+  background-color:white;
   background-repeat:no-repeat;
   background-size:cover;
-  opacity: 0.8;
+  opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;
@@ -20,88 +21,94 @@ body::after {
   z-index: -1;   
 }
 
+
 /*Title Page*/
 
 /*Title*/
-#title {
-    width:800px; 
-    margin:0 auto;
-    position:relative;
-    left:30px;
-    top: 70px;
-}
 
 #title h1 {   
-    position:relative; 
-    left: 185px;
+    padding-left:30px;
     color:#fbcb04;
+    text-shadow: 2px 2px #3a6eb8;
     font-size:50px;
+}
+.title-top-buffer {
+    margin-top:20px;
+    text-align:center;
+}
+#game-box{
+    background-color:grey;
+    height:600px;
+    padding-top:20px;
+    text-align:center;
 }
 
 /* League Levels(Game difficulty) */
 
-#league-levels {
-    width:800px; 
-    margin:0 auto;
-    position:relative;
-    top: 200px;
+
+
+#league-levels h2{             
+    color:#fbcb04;    
+    font-size:35px;
+    
 }
 
-#league-levels h2{   
-    margin:0 auto;
-    position:relative;    
-    color:#fbcb04;
-    left: 240px;
-    bottom:50px;
-    font-size:25px;
+.difficulty-top-buffer{
+    margin-top: 60px;
 }
 
 .ball-levels{
-    height:60px;
-    width:60px;
-    display:inline-block;
+    height:140px;
+    width:140px;    
+    opacity: 0.8;
+    margin-left:170px;
+    margin-top:30px;
 }
 
-.pokeball{
+.ball-levels:hover {
+    height:150px;
+    width:150px;
+    margin: -10px;
+    opacity: 1;
+     margin-left:170px;
+     margin-top:30px;
+}
+
+#pokeball{
     background-image:url("../../assets/images/Poké_Ball_Sprite.png");
     background-size:cover;
-    position:relative;
-    left:245px;
+    
+    
 }
 
-.greatball{
+#greatball{
     background-image:url("../../assets/images/Great_Ball_Sprite.png");
     background-size:cover;
-    position:relative;
-    left:285px
 }
 
-.masterball{
+#masterball{
     background-image:url("../../assets/images/Master_Ball_Sprite.png");
     background-size:cover;
-    position:relative;
-    left:325px;
 }
 
 /*Start*/
 
 #game-initiate {
-    width:800px; 
-    margin:0 auto;
-    position:relative;
-    top: 300px;
+    
+}
+
+.initiate-top-buffer{
+    margin-top: 60px;
 }
 
 #start {
     color:#fbcb04;
     position:relative;
-    top:0px;
-    left:340px;
+    
 }
 
 #rules {
     color:#fbcb04;
     position:relative;
-    top:20px;
-    left:285px;
+    
 }
