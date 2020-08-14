@@ -1,0 +1,107 @@
+/*background*/
+
+body {
+    background-image:url("../../assets/images/grass.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+body::after {
+  content: "";
+  background-color:black;
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+/*Title Page*/
+
+/*Title*/
+#title {
+    width:800px; 
+    margin:0 auto;
+    position:relative;
+    left:30px;
+    top: 70px;
+}
+
+#title h1 {   
+    position:relative; 
+    left: 185px;
+    color:#fbcb04;
+    font-size:50px;
+}
+
+/* League Levels(Game difficulty) */
+
+#league-levels {
+    width:800px; 
+    margin:0 auto;
+    position:relative;
+    top: 200px;
+}
+
+#league-levels h2{   
+    margin:0 auto;
+    position:relative;    
+    color:#fbcb04;
+    left: 240px;
+    bottom:50px;
+    font-size:25px;
+}
+
+.ball-levels{
+    height:60px;
+    width:60px;
+    display:inline-block;
+}
+
+.pokeball{
+    background-image:url("../../assets/images/Poké_Ball_Sprite.png");
+    background-size:cover;
+    position:relative;
+    left:245px;
+}
+
+.greatball{
+    background-image:url("../../assets/images/Great_Ball_Sprite.png");
+    background-size:cover;
+    position:relative;
+    left:285px
+}
+
+.masterball{
+    background-image:url("../../assets/images/Master_Ball_Sprite.png");
+    background-size:cover;
+    position:relative;
+    left:325px;
+}
+
+/*Start*/
+
+#game-initiate {
+    width:800px; 
+    margin:0 auto;
+    position:relative;
+    top: 300px;
+}
+
+#start {
+    color:#fbcb04;
+    position:relative;
+    top:0px;
+    left:340px;
+}
+
+#rules {
+    color:#fbcb04;
+    position:relative;
+    top:20px;
+    left:285px;
+}
