@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokémon match</title>
-    <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+    <title>Pokémon Match</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Recursive&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -13,50 +16,422 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <div class="container">
+  <body class="container-fluid">
+    <!-- Title Section -->
+    <div id="title-section">
       <div class="row title-top-buffer">
-        <div class="col col-centered" id="title">
-          <a href="index.html"
-            ><img
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+        <div class="col col-centered col-sm-12 col-md-6 col-lg-4" id="title">
+          <a href="index.html">
+            <img
+              id="title-image"
               src="https://fontmeme.com/permalink/200814/080422ec917271798a3b7c2620fb649b.png"
               alt="pokemon-font"
               border="0"
-          /></a>
-          <h1>Matching Pairs</h1>
+            />
+          </a>
+          <!-- <h1>Matching Pairs</h1> -->
         </div>
+
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
       </div>
     </div>
 
-    <div class="container" id="game-box">
-      <div class="container">
-        <div class="row difficulty-top-buffer">
-          <div class="col-12" id="league-levels">
+    <!-- Game Box -->
+    <div id="game-box">
+      <div class="game-box-card" id="league-levels">
+        <div class="row">
+          <div class="col-12">
             <h2>Select a League Difficulty</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-auto ball-levels" id="pokeball"></div>
-          <div class="col-md-auto ball-levels" id="greatball"></div>
-          <div class="col-md-auto ball-levels" id="masterball"></div>
+          <div class="col">
+            <img
+              id="pokeball"
+              class="ball-levels"
+              src="./assets/images/Poké_Ball_Sprite.png"
+            />
+          </div>
+          <div class="col">
+            <img
+              id="greatball"
+              class="ball-levels"
+              src="./assets/images/Great_Ball_Sprite.png"
+            />
+          </div>
+          <div class="col">
+            <img
+              id="masterball"
+              class="ball-levels"
+              src="./assets/images/Master_Ball_Sprite.png"
+            />
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+          <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+            <div class="col col-sm-12 col-md-6 col-lg-4" id="start">
+              <div class="game-box-button">Start</div>
+            </div>
+            <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+          <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+            <div class="col col-sm-12 col-md-6 col-lg-4" id="rules">
+              <div class="game-box-button">How to Play</div>
+            </div>
+            <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+          </div>
         </div>
       </div>
-    
-
-        <div class="container" id="game-initiate">
-        <div class="row initiate-top-buffer">
-            <div class="col" id="start">
-            <h2>Start</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" id="rules">
-            <h2>How to Play?</h2>
-            </div>
-        </div>
-        </div>
     </div>
-    
+    <!-- How to Play -->
+
+    <div class="game-box-card" id="game-rules1">
+      <div class="row">
+        <div class="col-12">
+          <h2>How to Play</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+          <img
+            class="prof_oak"
+            src="./assets/images/professor_oak.png"
+            alt="Professor Oak"
+          />
+        </div>
+
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+      </div>
+      <div class="col-12">
+        <div class="rules-box-button">
+          Welcome to the World of Pokémon! My name is Oak! People call me the
+          pokémon Professor!
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="next-button">Next</div>
+      </div>
+    </div>
+
+    <div class="game-box-card" id="game-rules2">
+      <div class="row">
+        <div class="col-12">
+          <h2>How to Play</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+          <img
+            class="prof_oak"
+            src="./assets/images/professor_oak.png"
+            alt="Professor Oak"
+          />
+        </div>
+
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+      </div>
+      <div class="col-12">
+        <div class="rules-box-button">
+          In the following pokéballs I have a collection of Pokemon for you to
+          choose from. Click on two pokéballs, and if they match, those pokémon
+          will be released.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="next-button">Next</div>
+      </div>
+    </div>
+
+    <div class="game-box-card" id="game-rules3">
+      <div class="row">
+        <div class="col-12">
+          <h2>How to Play</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+          <img
+            class="prof_oak"
+            src="./assets/images/professor_oak.png"
+            alt="Professor Oak"
+          />
+        </div>
+
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+      </div>
+      <div class="col-12">
+        <div class="rules-box-button">
+          If they don't match, return them to the pokéballs. Can you match all
+          the pokémon so they can play together within the time limit.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="next-button" id="finish_to_title">Finish</div>
+      </div>
+    </div>
+
+    <!-- Pokeball League -->
+    <div class="game-box-card" id="league-pokeball">
+      <div class="row">
+        <div class="col-12">
+          <h2>Pokéball League</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 time-left">
+          <img class="time" src="./assets/images/hourglass.png" /> You have
+          <span> 60 </span> seconds left
+        </div>
+      </div>
+      <div class="row ball-row">
+        <div class="col">
+          <img
+            id="pokeball1"
+            class="ball-levels"
+            src="./assets/images/Poké_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="pokeball2"
+            class="ball-levels"
+            src="./assets/images/Poké_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="pokeball3"
+            class="ball-levels"
+            src="./assets/images/Poké_Ball_Sprite.png"
+          />
+        </div>
+      </div>
+      <div class="row ball-row">
+        <div class="col">
+          <img
+            id="pokeball4"
+            class="ball-levels"
+            src="./assets/images/Poké_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="pokeball5"
+            class="ball-levels"
+            src="./assets/images/Poké_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="pokeball6"
+            class="ball-levels"
+            src="./assets/images/Poké_Ball_Sprite.png"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="return-button">Return to Title Page</div>
+      </div>
+    </div>
+
+    <!-- Greatball League -->
+    <div class="game-box-card" id="league-greatball">
+      <div class="row">
+        <div class="col-12">
+          <h2>Greatball League</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 time-left">
+          <img class="time" src="./assets/images/hourglass.png" /> You have
+          <span> 60 </span> seconds left
+        </div>
+      </div>
+      <div class="row ball-row">
+        <div class="col">
+          <img
+            id="greatball1"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="greatball2"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="greatball3"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="greatball4"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+      </div>
+      <div class="row ball-row">
+        <div class="col">
+          <img
+            id="greatball5"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="greatball6"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="greatball7"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="greatball8"
+            class="ball-levels"
+            src="./assets/images/Great_Ball_Sprite.png"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="return-button">Return to Title Page</div>
+      </div>
+    </div>
+
+    <!-- Mastertball League -->
+    <div class="game-box-card" id="league-masterball">
+      <div class="row">
+        <div class="col-12">
+          <h2>Masterball League</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 time-left">
+          <img class="time" src="./assets/images/hourglass.png" /> You have
+          <span> 60 </span> seconds left
+        </div>
+      </div>
+      <div class="row ball-row">
+        <div class="col">
+          <img
+            id="masterball1"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball2"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball3"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball4"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+      </div>
+      <div class="row ball-row">
+        <div class="col">
+          <img
+            id="masterball5"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball6"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball7"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball8"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+      </div>
+      <div class="row ball-row">
+        <div class="col">
+          <img
+            id="masterball9"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball10"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball11"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+        <div class="col">
+          <img
+            id="masterball12"
+            class="ball-levels"
+            src="./assets/images/Master_Ball_Sprite.png"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="return-button">Return to Title Page</div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

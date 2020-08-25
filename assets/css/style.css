@@ -1,114 +1,250 @@
 /*background*/
 
+
+
 body {
-    background-image:url("../../assets/images/grass.png");
-    background-repeat:no-repeat;
-    background-size:cover;
-    font-family: 'Recursive', sans-serif;
+  background-image: url("../../assets/images/grass.png");
+  background-size: cover;
+  font-family: "Recursive", sans-serif;
+  height: 100%;
+  width: 100%;
+  color: #fbcb04;
 }
 
 body::after {
   content: "";
-  background-color:white;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-color: white;
   opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1;   
+  z-index: -1;
 }
 
+/*Title Section*/
 
-/*Title Page*/
 
-/*Title*/
 
-#title h1 {   
-    padding-left:30px;
-    color:#fbcb04;
-    text-shadow: 2px 2px #3a6eb8;
-    font-size:50px;
+#title-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#league-pokeball .ball-row {
+    margin-top: 75px;
+}
+
+#league-greatball .ball-row {
+    margin-top: 75px;
+}
+
+#league-masterball .ball-row {
+    margin-top: 15px;
+}
+
+#title-image {
+  width: 100%;
+}
+
+#title h1 {
+  padding-left: 30px;
+  text-shadow: 2px 2px #3a6eb8;
+  font-size: 50px;
 }
 .title-top-buffer {
-    margin-top:20px;
-    text-align:center;
+  margin-top: 20px;
+  text-align: center;
 }
-#game-box{
-    background-color:grey;
-    height:600px;
-    padding-top:20px;
-    text-align:center;
+.game-box-card .row {
+    margin-top: 20px;
+}
+
+.game-box-card {
+  background-color: grey;
+  height: 650px;
+  padding-top: 20px;
+  text-align: center;
+  opacity: 90%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.game-box-button {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  border: 5px solid #555;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #444;
 }
 
 /* League Levels(Game difficulty) */
 
-
-
-#league-levels h2{             
-    color:#fbcb04;    
-    font-size:35px;
-    
+#league-levels h2 {
+  font-size: 35px;
+  margin-bottom: 50px;
 }
 
-.difficulty-top-buffer{
-    margin-top: 60px;
+#difficulty-section {
+  margin-top: 20px;
 }
 
-.ball-levels{
-    height:140px;
-    width:140px;    
-    opacity: 0.8;
-    margin-left:170px;
-    margin-top:30px;
+.ball-levels {
+  height: 140px;
+  width: 140px;
+  opacity: 0.8;
+  /* margin-left: 170px;
+  margin-top: 30px; */
 }
 
 .ball-levels:hover {
-    height:150px;
-    width:150px;
-    margin: -10px;
-    opacity: 1;
-     margin-left:170px;
-     margin-top:30px;
+  /* height: 1.1ex;
+  width: 1.1ex; */
+  opacity: 1;
 }
 
-#pokeball{
-    background-image:url("../../assets/images/Poké_Ball_Sprite.png");
-    background-size:cover;
-    
-    
-}
 
-#greatball{
-    background-image:url("../../assets/images/Great_Ball_Sprite.png");
-    background-size:cover;
-}
-
-#masterball{
-    background-image:url("../../assets/images/Master_Ball_Sprite.png");
-    background-size:cover;
-}
 
 /*Start*/
 
-#game-initiate {
-    
-}
 
-.initiate-top-buffer{
-    margin-top: 60px;
+.initiate-top-buffer {
+  margin-top: 60px;
 }
 
 #start {
-    color:#fbcb04;
-    position:relative;
-    
+  position: relative;
 }
 
 #rules {
-    color:#fbcb04;
-    position:relative;
-    
+  position: relative;
+}
+
+/*How to Play*/
+.prof_oak{
+    max-height: 300px;
+}
+
+.rules-box-button {
+  
+  text-align: center;
+  font-size: 2em;
+  border: 5px solid #555;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin: 50px 5px 5px 5px;
+  background-color: #444;
+}
+.next-button {  
+  text-align: center;
+  font-size: 1em;
+  border: 5px solid #555;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin: 5px 5px 5px 5px;
+  background-color: #444;
+  float: right;
+}
+
+/* Game Mode */
+.time {
+
+  height:35px;
+  width:20px;
+}
+
+.return-button {  
+  text-align: center;
+  font-size: 1em;
+  border: 5px solid #555;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin: 25px 5px 5px 5px;
+  background-color: #444;
+  float: right;
+}
+
+/* Screen sizes */
+@media screen and (max-width: 1024px) {
+  #game-box {
+    height: 900px;
+  }
+
+  #title h1 {
+    font-size: 30px;
+  }
+ 
+
+  .ball-levels {
+    height: 100px;
+    width: 100px;
+  }
+
+  .ball-levels:hover {
+    height: 110px;
+    width: 110px;
+  }
+  .rules-box-button {
+      font-size:1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #game-box {
+    height: 800px;
+  }
+  #title h1 {
+    font-size: 30px;
+  }
+
+  .game-box-button {
+      font-size:1em;
+  }
+  .ball-levels {
+    height: 50px;
+    width: 50px;
+  }
+
+  .ball-levels:hover {
+    height: 60px;
+    width: 60px;
+    margin: -10px;
+  }
+   .rules-box-button {
+      font-size:1.2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+   .ball-levels {
+    height: 30px;
+    width: 30px;
+  }
+
+  .ball-levels:hover {
+    height: 40px;
+    width: 40px;
+    margin: -10px;
+  }
+  .rules-box-button {
+      font-size:0.9em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  
+  .rules-box-button {
+      font-size:0.9em;
+  }
+}
+
+@media screen and (max-width: 280px) {
+   
+  .rules-box-button {
+      font-size:0.5em;
+  }
 }
