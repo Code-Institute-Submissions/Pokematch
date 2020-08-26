@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+
   </head>
   <body class="container-fluid">
     <!-- Title Section -->
@@ -26,12 +27,11 @@
           <a href="index.html">
             <img
               id="title-image"
-              src="https://fontmeme.com/permalink/200814/080422ec917271798a3b7c2620fb649b.png"
-              alt="pokemon-font"
-              border="0"
+              src="./assets/images/poke-logo.png"
+              alt="pokemon-logo"
             />
           </a>
-          <!-- <h1>Matching Pairs</h1> -->
+          <h1>Matching Pairs</h1>
         </div>
 
         <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
@@ -46,6 +46,7 @@
             <h2>Select a League Difficulty</h2>
           </div>
         </div>
+         <div class="blank-space">&nbsp</div>
         <div class="row">
           <div class="col">
             <img
@@ -69,6 +70,7 @@
             />
           </div>
         </div>
+        <div class="blank-space">&nbsp</div>
         <div class="container-fluid">
           <div class="row">
           <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
@@ -94,7 +96,7 @@
     <div class="game-box-card" id="game-rules1">
       <div class="row">
         <div class="col-12">
-          <h2>How to Play</h2>
+          <h2 class="rules-title">How to Play</h2>
         </div>
       </div>
       <div class="row">
@@ -124,7 +126,7 @@
     <div class="game-box-card" id="game-rules2">
       <div class="row">
         <div class="col-12">
-          <h2>How to Play</h2>
+          <h2 class="rules-title">How to Play</h2>
         </div>
       </div>
       <div class="row">
@@ -143,8 +145,7 @@
       <div class="col-12">
         <div class="rules-box-button">
           In the following pokéballs I have a collection of Pokemon for you to
-          choose from. Click on two pokéballs, and if they match, those pokémon
-          will be released.
+          choose from.
         </div>
       </div>
       <div class="col-12">
@@ -152,7 +153,7 @@
       </div>
     </div>
 
-    <div class="game-box-card" id="game-rules3">
+<div class="game-box-card" id="game-rules3">
       <div class="row">
         <div class="col-12">
           <h2>How to Play</h2>
@@ -173,8 +174,66 @@
       </div>
       <div class="col-12">
         <div class="rules-box-button">
-          If they don't match, return them to the pokéballs. Can you match all
-          the pokémon so they can play together within the time limit.
+          Click on two pokéballs, and if they match, those pokémon
+          will be released.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="next-button">Next</div>
+      </div>
+    </div>
+
+    <div class="game-box-card" id="game-rules4">
+      <div class="row">
+        <div class="col-12">
+          <h2>How to Play</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+          <img
+            class="prof_oak"
+            src="./assets/images/professor_oak.png"
+            alt="Professor Oak"
+          />
+        </div>
+
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+      </div>
+      <div class="col-12">
+        <div class="rules-box-button">
+          If they don't match, return them to the pokéballs. 
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="next-button">Next</div>
+      </div>
+    </div>
+
+     <div class="game-box-card" id="game-rules5">
+      <div class="row">
+        <div class="col-12">
+          <h2>How to Play</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+          <img
+            class="prof_oak"
+            src="./assets/images/professor_oak.png"
+            alt="Professor Oak"
+          />
+        </div>
+
+        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+      </div>
+      <div class="col-12">
+        <div class="rules-box-button">
+          Can you match and release all the pokémon before the timer runs out.
         </div>
       </div>
       <div class="col-12">
@@ -185,15 +244,16 @@
     <!-- Pokeball League -->
     <div class="game-box-card" id="league-pokeball">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 league-title">
           <h2>Pokéball League</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-12 time-left">
-          <img class="time" src="./assets/images/hourglass.png" /> You have
-          <span> 60 </span> seconds left
+          <div class="time"><img  src="./assets/images/hourglass.png" />  You have
+          <span> 60 </span> seconds left</div>
         </div>
+        
       </div>
       <div class="row ball-row">
         <div class="col">
@@ -249,14 +309,14 @@
     <!-- Greatball League -->
     <div class="game-box-card" id="league-greatball">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 league-title">
           <h2>Greatball League</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-12 time-left">
-          <img class="time" src="./assets/images/hourglass.png" /> You have
-          <span> 60 </span> seconds left
+          <div class="time"><img  src="./assets/images/hourglass.png" />  You have
+          <span> 60 </span> seconds left</div>
         </div>
       </div>
       <div class="row ball-row">
@@ -327,14 +387,14 @@
     <!-- Mastertball League -->
     <div class="game-box-card" id="league-masterball">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 league-title">
           <h2>Masterball League</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-12 time-left">
-          <img class="time" src="./assets/images/hourglass.png" /> You have
-          <span> 60 </span> seconds left
+          <div class="time"><img  src="./assets/images/hourglass.png" />  You have
+          <span> 60 </span> seconds left</div>
         </div>
       </div>
       <div class="row ball-row">
@@ -446,6 +506,8 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
-    ></script>
+    ></script>    
+    <script src="assets/js/scripts.js"></script>
+
   </body>
 </html>
