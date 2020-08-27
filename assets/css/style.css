@@ -104,18 +104,10 @@ input[type="image"]:focus{
 .ball-levels {
   height: 15vh;
   width: 15vh;
-  opacity: 0.8;
-  /* margin-left: 170px;
-  margin-top: 30px; */
+
 }
 
 
-
-.ball-levels:hover {
-  /* height: 1.1ex;
-  width: 1.1ex; */
-  opacity: 1;
-}
 
 
 
@@ -183,6 +175,11 @@ input[type="image"]:focus{
   
 }
 
+.ball-match{
+    height: 15vh;
+  width: 15vh;
+}
+
 #league-masterball .ball-row{
     height:16vh;
     margin-top: 15px;
@@ -207,7 +204,8 @@ input[type="image"]:focus{
   border-radius: 10px;  
   background-color: #444;  
   position: absolute;  
-  right: 5%; 
+  right: 5%;
+
 }
 
 /* Screen sizes */
@@ -217,6 +215,11 @@ input[type="image"]:focus{
     height: 10vh;
     width: 10vh;
   } 
+
+  .ball-match {
+      height: 10vh;
+      width: 10vh;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -225,6 +228,12 @@ input[type="image"]:focus{
     height: 10vh;
     width: 10vh;
   }
+
+    .ball-match{
+         height: 10vh;
+    width: 10vh;
+    }
+
 }
 
 @media screen and (max-width: 568px){ 
@@ -232,6 +241,12 @@ input[type="image"]:focus{
     height: 8vh;
     width: 8vh;
   }
+
+.ball-match{
+    height: 8vh;
+    width: 8vh;
+}
+
   #league-masterball .ball-row{
     height:11vh;
 }
@@ -241,6 +256,12 @@ input[type="image"]:focus{
     height: 7vh;
     width: 7vh;
   }
+
+  .ball-match {
+      height: 7vh;
+    width: 7vh;
+  }
+
   #league-masterball .ball-row{
     height:11vh;
 }
