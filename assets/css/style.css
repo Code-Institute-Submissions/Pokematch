@@ -31,6 +31,8 @@ h2 {
   margin-bottom: 10px;
 }
 
+
+
 /*Title Section*/
 
 
@@ -80,6 +82,16 @@ h2 {
   margin: 5px;
   background-color: #444;
 }
+
+input[type="image"]{
+    opacity:50%;    
+    border: 0 none;
+}
+input[type="image"]:focus{
+    opacity:100%; 
+    outline: 0;
+}
+    
 
 /* League Levels(Game difficulty) */
 
