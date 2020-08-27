@@ -1,6 +1,8 @@
 /*background*/
 
-
+.button:hover {
+    cursor: pointer;
+}
 
 body {
   background-image: url("../../assets/images/grass.png");
