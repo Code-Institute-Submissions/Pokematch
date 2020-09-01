@@ -1,7 +1,7 @@
 /*background*/
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 body {
@@ -11,7 +11,6 @@ body {
   height: 100%;
   width: 100%;
   color: #fbcb04;
-  
 }
 
 body::after {
@@ -31,18 +30,12 @@ h2 {
   margin-bottom: 10px;
 }
 
-
-
 /*Title Section*/
-
-
 
 #title-section {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-
-
 
 #title-image {
   width: 20vh;
@@ -58,19 +51,18 @@ h2 {
   text-align: center;
 }
 
-.blank-space{
-    padding:3vh;
+.blank-space {
+  padding: 3vh;
 }
 
 .game-box-card {
-  background-color:grey;
-  opacity:90%;
-  padding-top:10px;
-  text-align: center;  
-  width: 100%;   
-   height:75vh;
+  background-color: grey;
+  opacity: 90%;
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+  height: 75vh;
 }
-
 
 .game-box-button {
   width: 100%;
@@ -83,19 +75,16 @@ h2 {
   background-color: #444;
 }
 
-input[type="image"]{
-    opacity:50%;    
-    border: 0 none;
+input[type="image"] {
+  opacity: 50%;
+  border: 0 none;
 }
-input[type="image"]:focus{
-    opacity:100%; 
-    outline: 0;
+input[type="image"]:focus {
+  opacity: 100%;
+  outline: 0;
 }
-    
 
 /* League Levels(Game difficulty) */
-
-
 
 #difficulty-section {
   margin-top: 20px;
@@ -104,15 +93,9 @@ input[type="image"]:focus{
 .ball-levels {
   height: 15vh;
   width: 15vh;
-
 }
 
-
-
-
-
 /*Start*/
-
 
 .initiate-top-buffer {
   margin-top: 60px;
@@ -127,17 +110,16 @@ input[type="image"]:focus{
 }
 
 /*How to Play*/
-.prof_oak{
-    max-height: 40vh;
+.prof_oak {
+  max-height: 40vh;
 }
 
-.rules-title h2{    
-    font-size:2vh;
-    padding:0px;
+.rules-title h2 {
+  font-size: 2vh;
+  padding: 0px;
 }
 
 .rules-box-button {
-  
   text-align: center;
   font-size: 3vh;
   border: 5px solid #555;
@@ -146,7 +128,7 @@ input[type="image"]:focus{
   margin: 15px 5px 5px 5px;
   background-color: #444;
 }
-.next-button {  
+.next-button {
   text-align: center;
   font-size: 2vh;
   border: 5px solid #555;
@@ -158,113 +140,139 @@ input[type="image"]:focus{
 }
 
 /* Game Mode */
-.league-title{
-    height:5vh;
+.league-title {
+  height: 5vh;
 }
 
-.league-title h2{
-    font-size:4vh;
+.league-title h2 {
+  font-size: 4vh;
 }
 
-.time img{
-    width:2vh;
+.time img {
+  width: 2vh;
 }
 
-.time{
-  font-size: 1.5vh;  
-  
+.time {
+  font-size: 1.5vh;
 }
 
-
-
-.ball-match{
-    height: 15vh;
+.ball-match {
+  height: 15vh;
   width: 15vh;
 }
 
-#league-masterball .ball-row{
-    height:16vh;
-    margin-top: 15px;
+#league-masterball .ball-row {
+  height: 16vh;
+  margin-top: 15px;
 }
 
-#league-greatball .ball-row{
-    height:16vh;
-    margin-top: 15px;
+#league-greatball .ball-row {
+  height: 16vh;
+  margin-top: 15px;
 }
 
-#league-pokeball .ball-row{
-    height:16vh;
-    margin-top: 15px;
+#league-pokeball .ball-row {
+  height: 16vh;
+  margin-top: 15px;
 }
 
-
-.return-button {  
+.return-button {
   text-align: center;
   font-size: 2vh;
   border: 5px solid #555;
   padding: 5px 15px;
-  border-radius: 10px;  
-  background-color: #444;  
-  position: absolute;  
+  border-radius: 10px;
+  background-color: #444;
+  position: absolute;
   right: 5%;
+}
 
+/* Lose Modal */
+
+.timeUpWholeModal {
+    background-color: #c2cccf;
+}
+
+.timeUpTitle{
+  font-size: 4vh;
+  text-align: center;
+  color: #25689d;
+  margin: 0 auto;
+  
+}
+
+#timeUpScreen img {
+  height: 26vh;
+  width: 26vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#timeUpScreen h2 {
+  font-size: 2vh;
+  text-align: center;
+  color: #25689d;
+}
+
+.modalReturn{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Screen sizes */
 @media screen and (max-width: 1366px) {
-  
   .ball-levels {
     height: 10vh;
     width: 10vh;
-  } 
+  }
 
   .ball-match {
-      height: 10vh;
-      width: 10vh;
+    height: 10vh;
+    width: 10vh;
   }
 }
 
 @media screen and (max-width: 700px) {
-  
   .ball-levels {
     height: 10vh;
     width: 10vh;
   }
 
-    .ball-match{
-         height: 10vh;
+  .ball-match {
+    height: 10vh;
     width: 10vh;
-    }
-
+  }
 }
 
-@media screen and (max-width: 568px){ 
+@media screen and (max-width: 568px) {
   .ball-levels {
     height: 8vh;
     width: 8vh;
   }
 
-.ball-match{
+  .ball-match {
     height: 8vh;
     width: 8vh;
-}
+  }
 
-  #league-masterball .ball-row{
-    height:11vh;
+  #league-masterball .ball-row {
+    height: 11vh;
+  }
 }
-}
-@media screen and (max-width: 538px){ 
+@media screen and (max-width: 538px) {
   .ball-levels {
     height: 7vh;
     width: 7vh;
   }
 
   .ball-match {
-      height: 7vh;
+    height: 7vh;
     width: 7vh;
   }
 
-  #league-masterball .ball-row{
-    height:11vh;
-}
+  #league-masterball .ball-row {
+    height: 11vh;
+  }
 }

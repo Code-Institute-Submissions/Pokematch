@@ -9,6 +9,7 @@ function cardLevels() {
   document.getElementById("league-pokeball").style.display = "none";
   document.getElementById("league-greatball").style.display = "none";
   document.getElementById("league-masterball").style.display = "none";
+  
 }
 
 /* On initiate */
@@ -70,33 +71,45 @@ $("#start").click(function () {
   if (difficultySelect == "pokeball") {
     document.getElementById("league-pokeball").style.display = "block";
   } else if (difficultySelect == "greatball") {
-    document.getElementById("league-greatball").style.display = "block";
+    document.getElementById("league-greatball").style.display = "block";    
   } else if (difficultySelect == "masterball") {
     document.getElementById("league-masterball").style.display = "block";
   } else {
     document.getElementById("league-levels").style.display = "block";
   }
-  let timeleft = 2;
+  // Timer
+  let timeleft = 59;
   let downloadTimer = setInterval(function () {
-    if (timeleft <= -1) {
+    if (timeleft <= 0) {
         clearInterval(downloadTimer);
-        document.getElementById("league-greatball").style.display = "block";
-        document.getElementById("greatTimeRemaining").textContent = 3;
-        document.getElementById("greatProgressBar").value = 0;
-        alert("Time Up!");
+        $(".time-remaining").html(" " + timeleft + " ");
+        $('#timeUpModal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
     } else {
-      document.getElementById("greatTimeRemaining").textContent =
-        " " + timeleft + " ";
-      document.getElementById("greatProgressBar").value = 3 - timeleft;
+        console.log("Time: " + timeleft);
+        $(".time-remaining").html(" " + timeleft + " ");
+        document.getElementById("pokeProgressBar").value = 59 - timeleft;
+        document.getElementById("greatProgressBar").value = 59 - timeleft;
+        document.getElementById("masterProgressBar").value = 59 - timeleft;
       timeleft -= 1;
     }
   }, 1000);
 });
 
+/* Lose Modal */
+$(".modalReturn").click(function () {
+    $('#timeUpModal').modal("hide");
+  cardLevels();
+  document.getElementById("league-levels").style.display = "block"; 
+});
+$(".time-remaining").html(" " + 60 + " ");
+  document.getElementById("pokeProgressBar").value = 0;
+        document.getElementById("greatProgressBar").value = 0;
+        document.getElementById("masterProgressBar").value = 0;
 /* Game Cards */
 
-//Time Remaining
 
-//Great Ball
 
 

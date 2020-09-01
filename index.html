@@ -251,7 +251,8 @@
       <div class="row">
         <div class="col-12 time-left">
           <div class="time"><img  src="./assets/images/hourglass.png" />  You have
-          <span class="time-remaining"> </span> seconds left</div>
+          <span class="time-remaining">60</span> seconds left</div>
+          <progress value="0" max="60" class="progressBar" id="pokeProgressBar"></progress>
         </div>
         
       </div>
@@ -316,8 +317,8 @@
       <div class="row">
         <div class="col-12 time-left">
           <div class="time"><img  src="./assets/images/hourglass.png" />  You have
-          <span id="greatTimeRemaining" class="time-remaining">3 </span> seconds left</div>
-          <progress value="0" max="3" id="greatProgressBar"></progress>
+          <span class="time-remaining">60</span> seconds left</div>
+          <progress value="0" max="60" class="progressBar" id="greatProgressBar"></progress>
         </div>
       </div>
       <div class="row ball-row">
@@ -385,7 +386,7 @@
       </div>
     </div>
 
-    <!-- Mastertball League -->
+    <!-- Masterball League -->
     <div class="game-box-card" id="league-masterball">
       <div class="row">
         <div class="col-12 league-title">
@@ -395,8 +396,8 @@
       <div class="row">
         <div class="col-12 time-left">
           <div class="time"><img  src="./assets/images/hourglass.png" />  You have
-          <span class="time-remaining"></span> seconds left</div>
-          <progress value="0" max="10" id="progressBar"></progress>
+          <span class="time-remaining">3</span> seconds left</div>
+          <progress role="progressbar" value="0" max="59" class="progressBar" id="masterProgressBar"></progress>
         </div>
       </div>
       <div class="row ball-row">
@@ -493,6 +494,29 @@
         <div class="return-button button">Return to Title Page</div>
       </div>
     </div>
+
+    <!-- Modals -->
+
+<div class="modal fade" id="timeUpModal" tabindex="-1" role="dialog" aria-labelledby="timeUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content timeUpWholeModal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="timeUpModalLabel"><h1 class="timeUpTitle">Time Up!</h1></h5>          
+      </div>
+      <div class="modal-body">
+        <div id="timeUpScreen">
+            <img class="loseScreen"
+            src="./assets/images/sobble.png"/>
+             <h2>Looks like you ran out of time! <br> Better luck next time!</h2>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-sm btn-primary modalReturn">Return to Title</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
