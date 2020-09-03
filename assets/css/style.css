@@ -185,6 +185,7 @@ input[type="image"]:focus {
   background-color: #444;
   position: absolute;
   right: 5%;
+  color:#fbcb04;
 }
 
 /* Lose Modal */

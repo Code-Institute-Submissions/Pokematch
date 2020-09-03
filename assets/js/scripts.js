@@ -1,3 +1,39 @@
+/* Character Arrays */
+
+const characterArray=[{
+        name:"Pikachu",
+        img:"../../assets/images/pikachu.png"
+    },
+    {
+        name:"Eevee",
+        img:"../../assets/images/eevee.png"
+    },
+        {
+        name:"Cyndaquil",
+        img:"../../assets/images/cyndaquil.png"
+    },
+        {
+        name:"Bulbasaur",
+        img:"../../assets/images/bulbasaur.png"
+    },
+        {
+        name:"Horsea",
+        img:"../../assets/images/horsea.png"
+    },
+        {
+        name:"Mew",
+        img:"../../assets/images/mew.png"
+    },
+        {
+        name:"Suicune",
+        img:"../../assets/images/suicune.png"
+    },
+        {
+        name:"Banette",
+        img:"../../assets/images/banette.png"
+    }
+];
+
 /* Card calling */
 function cardLevels() {
   document.getElementById("league-levels").style.display = "none";
@@ -56,7 +92,7 @@ $("#finish_to_title").click(function () {
 $(".return-button").click(function () {
   difficultySelect = undefined;
   cardLevels();
-  document.getElementById("league-levels").style.display = "block";
+  document.getElementById("league-levels").style.display = "block"
 });
 
 /* Game mode difficulty initialiser */
@@ -66,10 +102,34 @@ $(".ball-levels").click(function () {
   difficultySelect = $(this).attr("id");
 });
 
+function randomisePokemon(difficultySelect) {
+    if (difficultySelect == "pokeball")
+        pokeballArray = characterArray.slice(0, 3).map(function () { 
+        return this.splice(Math.floor(Math.random() * this.length), 1)[0];
+    }, 
+    characterArray.slice());
+
+
+
+
+console.log(pokeballArray);
+        
+        
+        
+        // choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
+       
+    //while loops for 
+
+}; 
+
+
 $("#start").click(function () {
   cardLevels();
   if (difficultySelect == "pokeball") {
     document.getElementById("league-pokeball").style.display = "block";
+    randomisePokemon(difficultySelect);
+
+
   } else if (difficultySelect == "greatball") {
     document.getElementById("league-greatball").style.display = "block";    
   } else if (difficultySelect == "masterball") {
@@ -80,9 +140,12 @@ $("#start").click(function () {
   // Timer
   let timeleft = 59;
   let downloadTimer = setInterval(function () {
-    if (timeleft <= 0) {
+    if (timeleft <= -1) {
         clearInterval(downloadTimer);
-        $(".time-remaining").html(" " + timeleft + " ");
+        $(".time-remaining").html(" " + 60 + " ");
+        document.getElementById("pokeProgressBar").value = 0;
+        document.getElementById("greatProgressBar").value = 0;
+        document.getElementById("masterProgressBar").value = 0;
         $('#timeUpModal').modal({
             backdrop: 'static',
             keyboard: false
@@ -96,6 +159,8 @@ $("#start").click(function () {
       timeleft -= 1;
     }
   }, 1000);
+   
+  /* Matching Game rules */
 });
 
 /* Lose Modal */
@@ -106,10 +171,11 @@ $(".modalReturn").click(function () {
 });
 $(".time-remaining").html(" " + 60 + " ");
   document.getElementById("pokeProgressBar").value = 0;
-        document.getElementById("greatProgressBar").value = 0;
-        document.getElementById("masterProgressBar").value = 0;
-/* Game Cards */
+    document.getElementById("greatProgressBar").value = 0;
+    document.getElementById("masterProgressBar").value = 0;
 
 
+
+/* Game Rules */
 
 
