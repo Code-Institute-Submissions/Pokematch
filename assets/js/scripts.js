@@ -102,41 +102,39 @@ $(".ball-levels").click(function () {
   difficultySelect = $(this).attr("id");
 });
 
-function randomisePokemon(difficultySelect) {
-    if (difficultySelect == "pokeball")
-        pokeballArray = characterArray.slice(0, 3).map(function () { 
+function randomisePokemon(noOfPokemon) {
+    pokeballArray = characterArray.slice(0, noOfPokemon).map(function () { 
         return this.splice(Math.floor(Math.random() * this.length), 1)[0];
     }, 
     characterArray.slice());
 
-
-
-
-console.log(pokeballArray);
+    console.log(pokeballArray);
         
-        
-        
-        // choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
+    // choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
        
-    //while loops for 
+    //while loops for   
 
 }; 
 
 
 $("#start").click(function () {
+  
   cardLevels();
+  
   if (difficultySelect == "pokeball") {
     document.getElementById("league-pokeball").style.display = "block";
-    randomisePokemon(difficultySelect);
-
-
+    randomisePokemon(3);
   } else if (difficultySelect == "greatball") {
     document.getElementById("league-greatball").style.display = "block";    
+    randomisePokemon(4);
   } else if (difficultySelect == "masterball") {
     document.getElementById("league-masterball").style.display = "block";
+    randomisePokemon(6);
   } else {
     document.getElementById("league-levels").style.display = "block";
+    return;
   }
+
   // Timer
   let timeleft = 59;
   let downloadTimer = setInterval(function () {
