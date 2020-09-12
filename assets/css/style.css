@@ -4,6 +4,8 @@
   cursor: pointer;
 }
 
+
+
 body {
   background-image: url("../../assets/images/grass.png");
   background-size: cover;
@@ -174,6 +176,10 @@ input[type="image"]:focus {
 #league-pokeball .ball-row {
   height: 16vh;
   margin-top: 15px;
+}
+
+.ball-match:hover {
+    cursor: pointer;
 }
 
 .return-button {

@@ -2,35 +2,35 @@
 
 const characterArray=[{
         name:"Pikachu",
-        img:"../../assets/images/pikachu.png"
+        img:"./assets/images/pikachu.png"
     },
     {
         name:"Eevee",
-        img:"../../assets/images/eevee.png"
+        img:"./assets/images/eevee.png"
     },
         {
         name:"Cyndaquil",
-        img:"../../assets/images/cyndaquil.png"
+        img:"./assets/images/cyndaquil.png"
     },
         {
         name:"Bulbasaur",
-        img:"../../assets/images/bulbasaur.png"
+        img:"./assets/images/bulbasaur.png"
     },
         {
         name:"Horsea",
-        img:"../../assets/images/horsea.png"
+        img:"./assets/images/horsea.png"
     },
         {
         name:"Mew",
-        img:"../../assets/images/mew.png"
+        img:"./assets/images/mew.png"
     },
         {
         name:"Suicune",
-        img:"../../assets/images/suicune.png"
+        img:"./assets/images/suicune.png"
     },
         {
         name:"Banette",
-        img:"../../assets/images/banette.png"
+        img:"./assets/images/banette.png"
     }
 ];
 
@@ -102,34 +102,48 @@ $(".ball-levels").click(function () {
   difficultySelect = $(this).attr("id");
 });
 
-function randomisePokemon(noOfPokemon) {
-    pokeballArray = characterArray.slice(0, noOfPokemon).map(function () { 
+/* Randomise Pokemon in Pokeballs */
+
+function randomiseAllPokemon(noOfPokemon) {
+    var pokeballArray = characterArray.slice(0, noOfPokemon).map(function () { 
         return this.splice(Math.floor(Math.random() * this.length), 1)[0];
     }, 
     characterArray.slice());
-
     console.log(pokeballArray);
-        
-    // choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
-       
-    //while loops for   
 
+ 
+
+  // remove the balls when clicked
+$(".ball-match").click(function(){
+    console.log("this was clicked");
+
+    //$(this).removeAttr("src");    
+    
+    //choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
+    const randomPokemon = pokeballArray[Math.floor(Math.random() * pokeballArray.length)];
+    console.log(randomPokemon);
+    
+    $(this).attr("src", randomPokemon.img);
+
+    //$(this).on(randomPokemon).attr("img");
+          
+});
 }; 
 
-
+/* Game start */
 $("#start").click(function () {
   
   cardLevels();
   
   if (difficultySelect == "pokeball") {
     document.getElementById("league-pokeball").style.display = "block";
-    randomisePokemon(3);
+    randomiseAllPokemon(3);
   } else if (difficultySelect == "greatball") {
     document.getElementById("league-greatball").style.display = "block";    
-    randomisePokemon(4);
+    randomiseAllPokemon(4);
   } else if (difficultySelect == "masterball") {
     document.getElementById("league-masterball").style.display = "block";
-    randomisePokemon(6);
+    randomiseAllPokemon(6);
   } else {
     document.getElementById("league-levels").style.display = "block";
     return;
@@ -156,9 +170,7 @@ $("#start").click(function () {
         document.getElementById("masterProgressBar").value = 59 - timeleft;
       timeleft -= 1;
     }
-  }, 1000);
-   
-  /* Matching Game rules */
+  }, 1000);   
 });
 
 /* Lose Modal */
@@ -171,7 +183,6 @@ $(".time-remaining").html(" " + 60 + " ");
   document.getElementById("pokeProgressBar").value = 0;
     document.getElementById("greatProgressBar").value = 0;
     document.getElementById("masterProgressBar").value = 0;
-
 
 
 /* Game Rules */
