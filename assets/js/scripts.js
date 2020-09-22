@@ -171,16 +171,9 @@ $("#start").click(function () {
 
 /* Lose Modal */
 $(".modalReturn").click(function () {
-    $('#timeUpModal').modal("hide");
+  $('#timeUpModal').modal("hide");
   resetLevels();
-  document.getElementById("league-levels").style.display = "block"; 
+  document.getElementById("league-levels").style.display = "block";
 });
 $(".time-remaining").html(" " + 60 + " ");
-  document.getElementById("pokeProgressBar").value = 0;
-    document.getElementById("greatProgressBar").value = 0;
-    document.getElementById("masterProgressBar").value = 0;
-
-
-/* Game Rules */
-
-
+$(".progressBar").attr("value", "0")
