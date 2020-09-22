@@ -1,6 +1,6 @@
 /* Character Arrays */
 
-const characterArray=[{
+const allPokemon=[{
         name:"Pikachu",
         img:"./assets/images/pikachu.png"
     },
@@ -35,63 +35,59 @@ const characterArray=[{
 ];
 
 /* Card calling */
-function cardLevels() {
-  document.getElementById("league-levels").style.display = "none";
-  document.getElementById("game-rules1").style.display = "none";
-  document.getElementById("game-rules2").style.display = "none";
-  document.getElementById("game-rules3").style.display = "none";
-  document.getElementById("game-rules4").style.display = "none";
-  document.getElementById("game-rules5").style.display = "none";
-  document.getElementById("league-pokeball").style.display = "none";
-  document.getElementById("league-greatball").style.display = "none";
-  document.getElementById("league-masterball").style.display = "none";
-  
+
+function resetLevels() {
+
+  $(".game-box-card").hide();
+
 }
 
-/* On initiate */
+/* On initialise */
 
-function initialising() {
-  cardLevels();
+function initialise() {
+
+  resetLevels();
   document.getElementById("league-levels").style.display = "block";
+
 }
 
-window.onload = initialising;
+window.onload = initialise;
 
 /* How to play Cards */
 
 $("#rules").click(function () {
-  cardLevels();
+  resetLevels();
   document.getElementById("game-rules1").style.display = "block";
 });
 
 $("#next_button1").click(function () {
-  cardLevels();
+  resetLevels();
   document.getElementById("game-rules2").style.display = "block";
 });
 
 $("#next_button2").click(function () {
-  cardLevels();
+  resetLevels();
   document.getElementById("game-rules3").style.display = "block";
 });
 
 $("#next_button3").click(function () {
-  cardLevels();
+  resetLevels();
   document.getElementById("game-rules4").style.display = "block";
 });
 
 $("#next_button4").click(function () {
-  cardLevels();
+  resetLevels();
   document.getElementById("game-rules5").style.display = "block";
 });
 
 $("#finish_to_title").click(function () {
-  cardLevels();
+  resetLevels();
   document.getElementById("league-levels").style.display = "block";
 });
 
 $(".return-button").click(function () {
   difficultySelect = undefined;
-  cardLevels();
+  resetLevels();
   document.getElementById("league-levels").style.display = "block"
 });
 
@@ -105,10 +101,10 @@ $(".ball-levels").click(function () {
 /* Randomise Pokemon in Pokeballs */
 
 function randomiseAllPokemon(noOfPokemon) {
-    var pokeballArray = characterArray.slice(0, noOfPokemon).map(function () { 
+    var pokeballArray = allPokemon.slice(0, noOfPokemon).map(function () { 
         return this.splice(Math.floor(Math.random() * this.length), 1)[0];
     }, 
-    characterArray.slice());
+    allPokemon.slice());
     console.log(pokeballArray);
 
  
@@ -133,7 +129,7 @@ $(".ball-match").click(function(){
 /* Game start */
 $("#start").click(function () {
   
-  cardLevels();
+  resetLevels();
   
   if (difficultySelect == "pokeball") {
     document.getElementById("league-pokeball").style.display = "block";
@@ -176,7 +172,7 @@ $("#start").click(function () {
 /* Lose Modal */
 $(".modalReturn").click(function () {
     $('#timeUpModal').modal("hide");
-  cardLevels();
+  resetLevels();
   document.getElementById("league-levels").style.display = "block"; 
 });
 $(".time-remaining").html(" " + 60 + " ");
