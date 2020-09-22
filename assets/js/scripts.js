@@ -1,3 +1,5 @@
+let level = null;
+
 /* Character Arrays */
 
 const allPokemon=[{
@@ -33,6 +35,14 @@ const allPokemon=[{
         img:"./assets/images/banette.png"
     }
 ];
+
+/* League difficulty */
+
+$(".ball-levels").click(function () {
+
+  level = $(this).attr("id");
+
+});
 
 /* Card calling */
 
@@ -92,59 +102,72 @@ $(".return-button").click(function () {
 });
 
 /* Game mode difficulty initialiser */
+function initialiseLevel(level) {
 
-let difficultySelect = null;
-$(".ball-levels").click(function () {
-  difficultySelect = $(this).attr("id");
-});
+    if (level != null) {
+        // show level
+        $("#league-" + level).show();
+    }
+    else
+    {
+        // show level select and return
+        $("#league-levels").show();
+        return;
+    }
 
-/* Randomise Pokemon in Pokeballs */
+    var numberOfPokemon = 0;
 
-function randomiseAllPokemon(noOfPokemon) {
-    var pokeballArray = allPokemon.slice(0, noOfPokemon).map(function () { 
-        return this.splice(Math.floor(Math.random() * this.length), 1)[0];
-    }, 
-    allPokemon.slice());
-    console.log(pokeballArray);
+    switch (level) {
+        case "pokeball":
+            numberOfPokemon = 3;      
+            break;
+        case "greatball":
+            numberOfPokemon = 4;
+            break;
+        case "masterball":
+            numberOfPokemon = 6;
+            break;
+    }
 
- 
+    /* Randomise Pokemon in Pokeballs */
 
-  // remove the balls when clicked
-$(".ball-match").click(function(){
-    console.log("this was clicked");
+    let pokemon = randomisePokemon(numberOfPokemon);
 
-    //$(this).removeAttr("src");    
-    
-    //choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
-    const randomPokemon = pokeballArray[Math.floor(Math.random() * pokeballArray.length)];
-    console.log(randomPokemon);
-    
-    $(this).attr("src", randomPokemon.img);
+    function randomisePokemon(noOfPokemon) {
 
-    //$(this).on(randomPokemon).attr("img");
-          
-});
-}; 
+        var pokeballArray = allPokemon.slice(0, noOfPokemon).map(
+            function () { return this.splice(Math.floor(Math.random() * this.length), 1)[0]; },
+            allPokemon.slice()
+        );
+        
+        // remove the balls when clicked
+        $(".ball-match").click(function(){
+            console.log("this was clicked");
+
+            //$(this).removeAttr("src");    
+            
+            //choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
+            const randomPokemon = pokeballArray[Math.floor(Math.random() * pokeballArray.length)];
+            console.log(randomPokemon);
+            
+            $(this).attr("src", randomPokemon.img);
+
+            //$(this).on(randomPokemon).attr("img");
+                
+        });
+    };
+
+};
+
+
 
 /* Game start */
-$("#start").click(function () {
-  
-  resetLevels();
-  
-  if (difficultySelect == "pokeball") {
-    document.getElementById("league-pokeball").style.display = "block";
-    randomiseAllPokemon(3);
-  } else if (difficultySelect == "greatball") {
-    document.getElementById("league-greatball").style.display = "block";    
-    randomiseAllPokemon(4);
-  } else if (difficultySelect == "masterball") {
-    document.getElementById("league-masterball").style.display = "block";
-    randomiseAllPokemon(6);
-  } else {
-    document.getElementById("league-levels").style.display = "block";
-    return;
-  }
 
+$("#start").click(function () {
+
+  resetLevels();
+  initialiseLevel(level);
+  
   // Timer
   let timeleft = 59;
   let downloadTimer = setInterval(function () {
