@@ -101,6 +101,8 @@ $(".return-button").click(function () {
   document.getElementById("league-levels").style.display = "block"
 });
 
+var randomisedPokemon = [];
+
 /* Game mode difficulty initialiser */
 function initialiseLevel(level) {
 
@@ -129,37 +131,28 @@ function initialiseLevel(level) {
             break;
     }
 
-    /* Randomise Pokemon in Pokeballs */
+   
+
+   
 
     let pokemon = randomisePokemon(numberOfPokemon);
 
-    function randomisePokemon(noOfPokemon) {
+    // flatten to single array of (num of pokeballs)
+  for (var i=0; i<pokemon.length; i++) {
+    randomisedPokemon.push(pokemon[i]);
+    randomisedPokemon.push(pokemon[i]);
+  }
+  randomisedPokemon = randomisedPokemon.sort(() => Math.random() - 0.5);
 
-        var pokeballArray = allPokemon.slice(0, noOfPokemon).map(
-            function () { return this.splice(Math.floor(Math.random() * this.length), 1)[0]; },
-            allPokemon.slice()
-        );
-        
-        // remove the balls when clicked
-        $(".ball-match").click(function(){
-            console.log("this was clicked");
-
-            //$(this).removeAttr("src");    
-            
-            //choose random elements from new array for ball IDs e.g. pokeball1    (for i+)
-            const randomPokemon = pokeballArray[Math.floor(Math.random() * pokeballArray.length)];
-            console.log(randomPokemon);
-            
-            $(this).attr("src", randomPokemon.img);
-
-            //$(this).on(randomPokemon).attr("img");
-                
-        });
-    };
-
-};
-
-
+  // assign pokemon titles (tooltips) to pokeballs - testing purposes only
+  for (var i=0; i<randomisedPokemon.length; i++) {
+    var pokeballName = level+(i+1);
+    $("#" + pokeballName).attr("title", randomisedPokemon[i].name);
+    $("#" + pokeballName).data("pokemon-name", randomisedPokemon[i].name);
+    $("#" + pokeballName).data("pokemon-imgURL", randomisedPokemon[i].imgURL);
+  }
+  
+}; 
 
 /* Game start */
 
@@ -192,7 +185,23 @@ $("#start").click(function () {
   }, 1000);   
 });
 
-/* Lose Modal */
+/* Randomise Pokemon in Pokeballs */
+
+function randomisePokemon(noOfPokemon) {
+
+  var pokeballArray = allPokemon.slice(0, noOfPokemon).map(
+    function () { return this.splice(Math.floor(Math.random() * this.length), 1)[0]; },
+    allPokemon.slice()
+  );
+  
+  console.log(pokeballArray);
+
+  return pokeballArray;
+
+};
+
+
+    /* Lose Modal */
 $(".modalReturn").click(function () {
   $('#timeUpModal').modal("hide");
   resetLevels();
