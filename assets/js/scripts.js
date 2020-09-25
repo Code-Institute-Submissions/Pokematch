@@ -103,6 +103,9 @@ $(".return-button").click(function () {
 
 var randomisedPokemon = [];
 
+var previousPokemonName = null;
+var previousPokeballName = null;
+
 /* Game mode difficulty initialiser */
 function initialiseLevel(level) {
 
@@ -151,8 +154,22 @@ function initialiseLevel(level) {
     $("#" + pokeballName).data("pokemon-name", randomisedPokemon[i].name);
     $("#" + pokeballName).data("pokemon-imgURL", randomisedPokemon[i].imgURL);
   }
+
+  /* Remember the previous pokemon clicked */
+  $(".ball-match").click(function () {    
+    var currentDefaultPokeballImg = $(this).attr("src");
+    console.log("currentDefaultPokeballImg: " + currentDefaultPokeballImg);
+
+    var currentPokemonName = $(this).data("pokemon-name");
+    var currentPokeballimg = $(this).data("pokemon-img");
+    console.log("Current: " + currentPokemonName, " Previous: " + previousPokemonName);
+
+    $(this).attr("src", currentPokeballimg);
   
-}; 
+    previousPokemonName = currentPokemonName;
+}); 
+
+};
 
 /* Game start */
 
