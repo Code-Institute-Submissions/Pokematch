@@ -134,10 +134,6 @@ function initialiseLevel(level) {
             break;
     }
 
-   
-
-   
-
     let pokemon = randomisePokemon(numberOfPokemon);
 
     // flatten to single array of (num of pokeballs)
@@ -152,17 +148,20 @@ function initialiseLevel(level) {
     var pokeballName = level+(i+1);
     $("#" + pokeballName).attr("title", randomisedPokemon[i].name);
     $("#" + pokeballName).data("pokemon-name", randomisedPokemon[i].name);
-    $("#" + pokeballName).data("pokemon-imgURL", randomisedPokemon[i].imgURL);
+    $("#" + pokeballName).data("pokemon-img", randomisedPokemon[i].img);
   }
 
   /* Remember the previous pokemon clicked */
   $(".ball-match").click(function () {    
     var currentDefaultPokeballImg = $(this).attr("src");
     console.log("currentDefaultPokeballImg: " + currentDefaultPokeballImg);
+    
 
     var currentPokemonName = $(this).data("pokemon-name");
     var currentPokeballimg = $(this).data("pokemon-img");
     console.log("Current: " + currentPokemonName, " Previous: " + previousPokemonName);
+    console.log("Current Pokeball Image: " +  currentPokeballimg);
+
 
     $(this).attr("src", currentPokeballimg);
   
