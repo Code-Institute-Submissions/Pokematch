@@ -104,6 +104,7 @@ $(".return-button").click(function () {
 var randomisedPokemon = [];
 
 var previousPokemonName = null;
+var previousPokemonimg = null;
 var previousPokeballName = null;
 
 /* Game mode difficulty initialiser */
@@ -162,6 +163,13 @@ function initialiseLevel(level) {
     console.log("Current: " + currentPokemonName, " Previous: " + previousPokemonName);
     console.log("Current Pokeball Image: " +  currentPokeballimg);
 
+    if (previousPokemonName == currentPokemonName){
+        // match
+      $(this).attr("src", currentPokeballimg).hide();
+      $(this).attr("src", previousPokeballimg).hide();
+      $("#" + previousPokeballName).attr("src", currentPokeballimg);
+
+    }
 
     $(this).attr("src", currentPokeballimg);
   
