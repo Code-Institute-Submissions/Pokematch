@@ -1,4 +1,6 @@
 let level = null;
+let levelPokeballImage = null;
+
 
 /* Character Arrays */
 
@@ -132,13 +134,16 @@ function initialiseLevel(level) {
 
     switch (level) {
         case "pokeball":
-            numberOfPokemon = 3;      
+            numberOfPokemon = 3;
+            levelPokeballImage = "Poké_Ball_Sprite.png";
             break;
         case "greatball":
             numberOfPokemon = 4;
+            levelPokeballImage = "Great_Ball_Sprite.png";
             break;
         case "masterball":
             numberOfPokemon = 6;
+            levelPokeballImage = "Master_Ball_Sprite.png";
             break;
     }
 
@@ -194,7 +199,27 @@ function initialiseLevel(level) {
     else if (previousPokemonName != currentPokemonName) {
     //no match
         console.log("previousPokemonName does not match currentPokemonName");
-    }
+
+        $(".ball-match").attr("disabled", "disabled");
+
+      let pokeballHideTimer = setInterval(function () {
+        clearInterval(pokeballHideTimer);
+        console.log("timer up");
+
+        $("#" + previousPokeballName).attr("src", "./assets/images/" + levelPokeballImage);
+        $("#" + currentPokeballName).attr("src", "./assets/images/" + levelPokeballImage);
+
+        previousPokemonName = null;
+        previousPokemonImage = null;
+        previousPokeballName = null;
+  
+        currentPokemonName = null;
+        currentPokemonImage = null;
+        currentPokeballName = null;
+
+    }, 1000);
+
+}
 
 }); 
 
