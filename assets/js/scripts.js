@@ -206,7 +206,10 @@ function initialiseLevel(level) {
         winTimer = setInterval(function () {
           clearInterval(winTimer);
           
-          alert("you Win")
+          $('#winModal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
 
         }, 1000);
     }
@@ -248,7 +251,10 @@ $("#start").click(function () {
   resetLevels();
   initialiseLevel(level);
   
-  // Timer
+  /* Timer */ 
+  
+  //(used the following website to support with this: https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
+   
   let timeleft = 59;
   gameOverTimer = setInterval(function () {
     if (timeleft <= -1) {

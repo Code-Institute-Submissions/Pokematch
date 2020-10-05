@@ -194,7 +194,15 @@ input[type="image"]:focus {
   color:#fbcb04;
 }
 
-/* Lose Modal */
+/* Modals */
+
+.modalReturn{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Lose modal */
 
 .timeUpWholeModal {
     background-color: #c2cccf;
@@ -222,11 +230,33 @@ input[type="image"]:focus {
   color: #25689d;
 }
 
-.modalReturn{
-    display: block;
+/* Win modal */
+
+.winWholeModal {
+  background-color: #e9e799;
+}
+
+.winTitle{
+font-size: 4vh;
+text-align: center;
+color: #ff1010;
+margin: 0 auto;
+}
+
+#winScreen img {
+  height: 26vh;
+  width: 26vh;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+#winScreen h2 {
+  font-size: 2vh;
+  text-align: center;
+  color: #ff1010;
+}
+
 
 /* Screen sizes */
 @media screen and (max-width: 1366px) {
