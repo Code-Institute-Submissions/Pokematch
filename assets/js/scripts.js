@@ -167,7 +167,12 @@ function initialiseLevel(level) {
   }
 
   /* Remember the previous pokemon clicked */
-  $(".ball-match").click(function () {       
+  $(".ball-match").click(function () {     
+      
+    var isDisabled = $(this).attr("disabled") == "disabled";
+    if (isDisabled) { return; }
+
+    console.log("IsDisabled: " + isDisabled);
 
     currentPokemonName = $(this).data("pokemon-name");
     currentPokemonImage = $(this).data("pokemon-img");
@@ -210,7 +215,7 @@ function initialiseLevel(level) {
             backdrop: 'static',
             keyboard: false
         });
-
+            $(".ball-match").removeAttr("disabled");   
         }, 1000);
     }
     
@@ -236,6 +241,7 @@ function initialiseLevel(level) {
         currentPokemonImage = null;
         currentPokeballName = null;
 
+        $(".ball-match").removeAttr("disabled");    
     }, 1000);
 
 }
