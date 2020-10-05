@@ -191,7 +191,11 @@ function initialiseLevel(level) {
       previousPokeballName = null;
     
 }
-    
+    else if (previousPokemonName != currentPokemonName) {
+    //no match
+        console.log("previousPokemonName does not match currentPokemonName");
+    }
+
 }); 
 
 };
