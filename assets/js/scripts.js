@@ -1,6 +1,8 @@
 let level = null;
 let levelPokeballImage = null;
 
+var gameOverTimer;
+
 
 /* Character Arrays */
 
@@ -194,6 +196,20 @@ function initialiseLevel(level) {
 
       previousPokemonName = null;
       previousPokeballName = null;
+
+        // Win condition     
+      if (matchedPokemon == numberOfPokemon)
+      {
+        $(".ball-match").attr("disabled", "disabled");    // disable all pokeballs
+        clearInterval(gameOverTimer);   // stop timer
+
+        winTimer = setInterval(function () {
+          clearInterval(winTimer);
+          
+          alert("you Win")
+
+        }, 1000);
+    }
     
 }
     else if (previousPokemonName != currentPokemonName) {
