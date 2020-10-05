@@ -250,9 +250,9 @@ $("#start").click(function () {
   
   // Timer
   let timeleft = 59;
-  let downloadTimer = setInterval(function () {
+  gameOverTimer = setInterval(function () {
     if (timeleft <= -1) {
-        clearInterval(downloadTimer);
+        clearInterval(gameOverTimer);
         $(".time-remaining").html(" " + 60 + " ");
         document.getElementById("pokeProgressBar").value = 0;
         document.getElementById("greatProgressBar").value = 0;
