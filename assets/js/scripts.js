@@ -175,9 +175,22 @@ function initialiseLevel(level) {
       previousPokemonName = currentPokemonName;
       previousPokeballName = $(this).attr("id");  
     }
+    else if (previousPokemonName == currentPokemonName) {
+      // match
+      console.log("previousPokemonName matches currentPokemonName");
 
+      $("#" + previousPokeballName).show();
+      $(this).show();
+
+      matchedPokemon++;
+      console.log(matchedPokemon);
+
+      console.log
+
+      previousPokemonName = null;
+      previousPokeballName = null;
     
-  
+}
     
 }); 
 
