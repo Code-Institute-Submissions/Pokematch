@@ -111,6 +111,9 @@ var currentPokemonName = null;
 var currentPokemonImage = null;
 var currentPokeballName = null;
 
+var matchedPokemon = 0;
+var numberOfPokemon = 0;
+
 /* Game mode difficulty initialiser */
 function initialiseLevel(level) {
 
@@ -125,7 +128,7 @@ function initialiseLevel(level) {
         return;
     }
 
-    var numberOfPokemon = 0;
+    
 
     switch (level) {
         case "pokeball":
@@ -157,27 +160,25 @@ function initialiseLevel(level) {
   }
 
   /* Remember the previous pokemon clicked */
-  $(".ball-match").click(function () {    
-    var currentDefaultPokeballImg = $(this).attr("src");
-    console.log("currentDefaultPokeballImg: " + currentDefaultPokeballImg);
-    
+  $(".ball-match").click(function () {       
 
-    var currentPokemonName = $(this).data("pokemon-name");
-    var currentPokeballimg = $(this).data("pokemon-img");
-    console.log("Current: " + currentPokemonName, " Previous: " + previousPokemonName);
-    console.log("Current Pokeball Image: " +  currentPokeballimg);
+    currentPokemonName = $(this).data("pokemon-name");
+    currentPokemonImage = $(this).data("pokemon-img");
+    currentPokeballName = $(this).attr("id");
 
-    if (previousPokemonName == currentPokemonName){
-        // match
-      $(this).attr("src", currentPokemonImage).hide();
-      $(this).attr("src", previousPokemonImage).hide();
-      $("#" + previousPokeballName).attr("src", currentPokeballimg);
+    $(this).attr("src", currentPokemonImage);
 
+    if (previousPokemonName == null){
+        // if no previous, first in sequence
+      console.log("previousPokemonName is null");
+        
+      previousPokemonName = currentPokemonName;
+      previousPokeballName = $(this).attr("id");  
     }
 
-    $(this).attr("src", currentPokeballimg);
+    
   
-    previousPokemonName = currentPokemonName;
+    
 }); 
 
 };
