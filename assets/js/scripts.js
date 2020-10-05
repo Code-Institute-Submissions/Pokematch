@@ -167,7 +167,9 @@ function initialiseLevel(level) {
   }
 
   /* Remember the previous pokemon clicked */
-  $(".ball-match").click(function () {     
+  $(".ball-match").click(function () { 
+      
+    $(this).effect( "bounce", "slow" );
       
     var isDisabled = $(this).attr("disabled") == "disabled";
     if (isDisabled) { return; }
