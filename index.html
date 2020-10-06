@@ -1,559 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokémon Match</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Recursive&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
 
-  </head>
-  <body class="container-fluid">
-    <!-- Title Section -->
-    <div id="title-section">
-      <div class="row title-top-buffer">
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pokémon Match</title>
+	<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+	<link rel="stylesheet" href="assets/css/style.css" />
 
-        <div class="col col-centered col-sm-12 col-md-6 col-lg-4" id="title">
-          <a href="index.html">
-            <img
+</head>
+
+<body class="container-fluid">
+	<!-- Title Section -->
+	<div id="title-section">
+		<div class="row title-top-buffer">
+			<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+			<div class="col col-centered col-sm-12 col-md-6 col-lg-4" id="title">
+				<a href="index.html">
+					<img
               id="title-image"
               src="./assets/images/poke-logo.png"
               alt="pokemon-logo"
             />
           </a>
-          <h1>Matching Pairs</h1>
-        </div>
+					<h1>Matching Pairs</h1>
+			</div>
 
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-      </div>
-    </div>
+			<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+		</div>
+	</div>
 
-    <!-- Game Box -->
-    <div id="game-box">
-      <div class="game-box-card" id="league-levels">
-        <div class="row">
-          <div class="col-12">
-            <h2>Select a League Difficulty</h2>
-          </div>
-        </div>
-         <div class="blank-space">&nbsp</div>
-        <div class="row">
-          <div class="col">
-            <input type="image"
+	<!-- Game Box -->
+	<div id="game-box">
+		<div class="game-box-card" id="league-levels">
+			<div class="row">
+				<div class="col-12">
+					<h2>Select a League Difficulty</h2>
+				</div>
+			</div>
+			<div class="blank-space">&nbsp</div>
+			<div class="row">
+				<div class="col">
+					<input type="image"
               id="pokeball"
               class="ball-levels"
               src="./assets/images/Poké_Ball_Sprite.png"
             />
-          </div>
-          <div class="col">
-            <input type= "image"
+					<h3 class="difficultyText"> Pokéball <br> (Easy) </h3>
+				</div>
+				<div class="col">
+					<input type= "image"
               id="greatball"
               class="ball-levels"
               src="./assets/images/Great_Ball_Sprite.png"
             />
-          </div>
-          <div class="col">
-            <input type= "image"
+					<h3 class="difficultyText"> Greatball <br> (Normal) </h3>
+				</div>
+				<div class="col">
+					<input type= "image"
               id="masterball"
               class="ball-levels"
               src="./assets/images/Master_Ball_Sprite.png"
             />
-          </div>
-        </div>
-        <div class="blank-space">&nbsp</div>
-        <div class="container-fluid">
-          <div class="row">
-          <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-            <div class="col col-sm-12 col-md-6 col-lg-4" id="start">
-              <div class="game-box-button button">Start</div>
-            </div>
-            <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <div class="row">
-          <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-            <div class="col col-sm-12 col-md-6 col-lg-4" id="rules">
-              <div class="game-box-button button">How to Play</div>
-            </div>
-            <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- How to Play -->
+					<h3 class="difficultyText"> Masterball <br> (Hard) </h3>
+				</div>
+			</div>
+			<div class="blank-space">&nbsp</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+					<div class="col col-sm-12 col-md-6 col-lg-4" id="start">
+						<div class="game-box-button button">Start</div>
+					</div>
+					<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+					<div class="col col-sm-12 col-md-6 col-lg-4" id="rules">
+						<div class="game-box-button button">How to Play</div>
+					</div>
+					<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+				</div>
+			</div>
 
-    <div class="game-box-card" id="game-rules1">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="rules-title">How to Play</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
 
-        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
-          <img
+			</div>
+		</div>
+		<!-- How to Play -->
+
+		<div class="game-box-card" id="game-rules1">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="rules-title">How to Play</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+
+				<div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+					<img
             class="prof_oak"
             src="./assets/images/professor_oak.png"
             alt="Professor Oak"
           />
         </div>
 
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-      </div>
-      <div class="col-12">
-        <div class="rules-box-button">
-          Welcome to the World of Pokémon! My name is Oak! People call me the
-          pokémon Professor!
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="next-button button" id="next_button1">Next</div>
-      </div>
-    </div>
+					<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+				</div>
+				<div class="col-12">
+					<div class="rules-box-button">
+						Welcome to the World of Pokémon! My name is Oak! People call me the
+						pokémon Professor!
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="next-button button" id="next_button1">Next</div>
+				</div>
+			</div>
 
-    <div class="game-box-card" id="game-rules2">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="rules-title">How to Play</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+			<div class="game-box-card" id="game-rules2">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="rules-title">How to Play</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
 
-        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
-          <img
+					<div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+						<img
             class="prof_oak"
             src="./assets/images/professor_oak.png"
             alt="Professor Oak"
           />
         </div>
 
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-      </div>
-      <div class="col-12">
-        <div class="rules-box-button">
-          In the following pokéballs I have a collection of Pokemon for you to
-          choose from.
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="next-button button" id="next_button2">Next</div>
-      </div>
-    </div>
+						<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+					</div>
+					<div class="col-12">
+						<div class="rules-box-button">
+							In the following pokéballs I have a collection of Pokemon for you to
+							choose from.
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="next-button button" id="next_button2">Next</div>
+					</div>
+				</div>
 
-<div class="game-box-card" id="game-rules3">
-      <div class="row">
-        <div class="col-12">
-          <h2>How to Play</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+				<div class="game-box-card" id="game-rules3">
+					<div class="row">
+						<div class="col-12">
+							<h2>How to Play</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
 
-        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
-          <img
+						<div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+							<img
             class="prof_oak"
             src="./assets/images/professor_oak.png"
             alt="Professor Oak"
           />
         </div>
 
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-      </div>
-      <div class="col-12">
-        <div class="rules-box-button">
-          Click on two pokéballs, and if they match, those pokémon
-          will be released.
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="next-button button"  id="next_button3">Next</div>
-      </div>
-    </div>
+							<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+						</div>
+						<div class="col-12">
+							<div class="rules-box-button">
+								Click on two pokéballs, and if they match, those pokémon
+								will play together.
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="next-button button" id="next_button3">Next</div>
+						</div>
+					</div>
 
-    <div class="game-box-card" id="game-rules4">
-      <div class="row">
-        <div class="col-12">
-          <h2>How to Play</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+					<div class="game-box-card" id="game-rules4">
+						<div class="row">
+							<div class="col-12">
+								<h2>How to Play</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
 
-        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
-          <img
+							<div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+								<img
             class="prof_oak"
             src="./assets/images/professor_oak.png"
             alt="Professor Oak"
           />
         </div>
 
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-      </div>
-      <div class="col-12">
-        <div class="rules-box-button">
-          If they don't match, return them to the pokéballs. 
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="next-button button button" id="next_button4">Next</div>
-      </div>
-    </div>
+								<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+							</div>
+							<div class="col-12">
+								<div class="rules-box-button">
+									If they don't match, return them to the pokéballs.
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="next-button button button" id="next_button4">Next</div>
+							</div>
+						</div>
 
-     <div class="game-box-card" id="game-rules5">
-      <div class="row">
-        <div class="col-12">
-          <h2>How to Play</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+						<div class="game-box-card" id="game-rules5">
+							<div class="row">
+								<div class="col-12">
+									<h2>How to Play</h2>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
 
-        <div class="col col-centered col-sm-12 col-md-6 col-lg-4">
-          <img
+								<div class="col col-centered col-sm-12 col-md-6 col-lg-4">
+									<img
             class="prof_oak"
             src="./assets/images/professor_oak.png"
             alt="Professor Oak"
           />
         </div>
 
-        <div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
-      </div>
-      <div class="col-12">
-        <div class="rules-box-button">
-          Can you match and release all the pokémon before the timer runs out.
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="next-button button" id="finish_to_title">Finish</div>
-      </div>
-    </div>
+									<div class="col d-none d-sm-block col-md-3 col-lg-4"></div>
+								</div>
+								<div class="col-12">
+									<div class="rules-box-button">
+										Can you match and release all the pokémon before the timer runs out.
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="next-button button" id="finish_to_title">Finish</div>
+								</div>
+							</div>
 
-    <!-- Pokeball League -->
-    <div class="game-box-card" id="league-pokeball">
-      <div class="row">
-        <div class="col-12 league-title">
-          <h2>Pokéball League</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 time-left">
-          <div class="time"><img  src="./assets/images/hourglass.png" />  You have
-          <span class="time-remaining">60</span> seconds left</div>
-          <progress value="0" max="60" class="progressBar" id="pokeProgressBar"></progress>
-        </div>
-        
-      </div>
-      <div class="row ball-row">
-        <div class="col ball-selectors">
-          <img
+							<!-- Pokeball League -->
+							<div class="game-box-card" id="league-pokeball">
+								<div class="row">
+									<div class="col-12 league-title">
+										<h2>Pokéball League</h2>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 time-left">
+										<div class="time"><img  src="./assets/images/hourglass.png" />  You have
+											<span class="time-remaining">60</span> seconds left</div>
+										<progress value="0" max="60" class="progressBar"
+											id="pokeProgressBar"></progress>
+									</div>
+
+								</div>
+								<div class="row ball-row">
+									<div class="col ball-selectors">
+										<img
             id="pokeball1"
             class="ball-match"
             src="./assets/images/Poké_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+										<div class="col ball-selectors">
+											<img
             id="pokeball2"
             class="ball-match"
             src="./assets/images/Poké_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+											<div class="col ball-selectors">
+												<img
             id="pokeball3"
             class="ball-match"
             src="./assets/images/Poké_Ball_Sprite.png"
           />
         </div>
-      </div>
-      <div class="row ball-row">
-        <div class="col ball-selectors">
-          <img
+											</div>
+											<div class="row ball-row">
+												<div class="col ball-selectors">
+													<img
             id="pokeball4"
             class="ball-match"
             src="./assets/images/Poké_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+													<div class="col ball-selectors">
+														<img
             id="pokeball5"
             class="ball-match"
             src="./assets/images/Poké_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+														<div class="col ball-selectors">
+															<img
             id="pokeball6"
             class="ball-match"
             src="./assets/images/Poké_Ball_Sprite.png"
           />
         </div>
-      </div>
-      <div class="col-12">      
-        <a href="index.html" class="return-button button">Return to Title Page</a>
-      </div>
-    </div>
+														</div>
+														<div class="col-12">
+															<a href="index.html" class="return-button button">Return to
+																Title Page</a>
+														</div>
+													</div>
 
-    <!-- Greatball League -->
-    <div class="game-box-card" id="league-greatball">
-      <div class="row">
-        <div class="col-12 league-title">
-          <h2>Greatball League</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 time-left">
-          <div class="time"><img  src="./assets/images/hourglass.png" />  You have
-          <span class="time-remaining">60</span> seconds left</div>
-          <progress value="0" max="60" class="progressBar" id="greatProgressBar"></progress>
-        </div>
-      </div>
-      <div class="row ball-row">
-        <div class="col ball-selectors">
-          <img
+													<!-- Greatball League -->
+													<div class="game-box-card" id="league-greatball">
+														<div class="row">
+															<div class="col-12 league-title">
+																<h2>Greatball League</h2>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-12 time-left">
+																<div class="time"><img  src="./assets/images/hourglass.png" />  You have
+																	<span class="time-remaining">60</span> seconds left
+																</div>
+																<progress value="0" max="60" class="progressBar"
+																	id="greatProgressBar"></progress>
+															</div>
+														</div>
+														<div class="row ball-row">
+															<div class="col ball-selectors">
+																<img
             id="greatball1"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																<div class="col ball-selectors">
+																	<img
             id="greatball2"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																	<div class="col ball-selectors">
+																		<img
             id="greatball3"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																		<div class="col ball-selectors">
+																			<img
             id="greatball4"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-      </div>
-      <div class="row ball-row">
-        <div class="col ball-selectors">
-          <img
+																		</div>
+																		<div class="row ball-row">
+																			<div class="col ball-selectors">
+																				<img
             id="greatball5"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																				<div class="col ball-selectors">
+																					<img
             id="greatball6"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																					<div class="col ball-selectors">
+																						<img
             id="greatball7"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																						<div class="col ball-selectors">
+																							<img
             id="greatball8"
             class="ball-match"
             src="./assets/images/Great_Ball_Sprite.png"
           />
         </div>
-      </div>
-      <div class="col-12">
-        <a href="index.html" class="return-button button">Return to Title Page</a>
-      </div>
-    </div>
+																						</div>
+																						<div class="col-12">
+																							<a href="index.html"
+																								class="return-button button">Return
+																								to Title Page</a>
+																						</div>
+																					</div>
 
-    <!-- Masterball League -->
-    <div class="game-box-card" id="league-masterball">
-      <div class="row ball-selectors">
-        <div class="col-12 league-title">
-          <h2>Masterball League</h2>
-        </div>
-      </div>
-      <div class="row ball-selectors">
-        <div class="col-12 time-left">
-          <div class="time"><img  src="./assets/images/hourglass.png" />  You have
-          <span class="time-remaining">3</span> seconds left</div>
-          <progress role="progressbar" value="0" max="59" class="progressBar" id="masterProgressBar"></progress>
-        </div>
-      </div>
-      <div class="row ball-row">
-        <div class="col ball-selectors">
-          <img
+																					<!-- Masterball League -->
+																					<div class="game-box-card"
+																						id="league-masterball">
+																						<div class="row ball-selectors">
+																							<div
+																								class="col-12 league-title">
+																								<h2>Masterball League
+																								</h2>
+																							</div>
+																						</div>
+																						<div class="row ball-selectors">
+																							<div
+																								class="col-12 time-left">
+																								<div class="time"><img  src="./assets/images/hourglass.png" />  You have
+																									<span class="time-remaining">3</span>
+																									seconds left</div>
+																								<progress
+																									role="progressbar"
+																									value="0" max="59"
+																									class="progressBar"
+																									id="masterProgressBar"></progress>
+																							</div>
+																						</div>
+																						<div class="row ball-row">
+																							<div
+																								class="col ball-selectors">
+																								<img
             id="masterball1"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																								<div
+																									class="col ball-selectors">
+																									<img
             id="masterball2"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																									<div
+																										class="col ball-selectors">
+																										<img
             id="masterball3"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																										<div
+																											class="col ball-selectors">
+																											<img
             id="masterball4"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-      </div>
-      <div class="row ball-row">
-        <div class="col ball-selectors">
-          <img
+																										</div>
+																										<div
+																											class="row ball-row">
+																											<div
+																												class="col ball-selectors">
+																												<img
             id="masterball5"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																												<div
+																													class="col ball-selectors">
+																													<img
             id="masterball6"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																													<div
+																														class="col ball-selectors">
+																														<img
             id="masterball7"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																														<div
+																															class="col ball-selectors">
+																															<img
             id="masterball8"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-      </div>
-      <div class="row ball-row">
-        <div class="col ball-selectors">
-          <img
+																														</div>
+																														<div
+																															class="row ball-row">
+																															<div
+																																class="col ball-selectors">
+																																<img
             id="masterball9"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																																<div
+																																	class="col ball-selectors">
+																																	<img
             id="masterball10"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																																	<div
+																																		class="col ball-selectors">
+																																		<img
             id="masterball11"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-        <div class="col ball-selectors">
-          <img
+																																		<div
+																																			class="col ball-selectors">
+																																			<img
             id="masterball12"
             class="ball-match"
             src="./assets/images/Master_Ball_Sprite.png"
           />
         </div>
-      </div>
-      <div class="col-12">
-        <a href="index.html" class="return-button button">Return to Title Page</a>
-      </div>
-    </div>
+																																		</div>
+																																		<div
+																																			class="col-12">
+																																			<a href="index.html"
+																																				class="return-button button">Return
+																																				to
+																																				Title
+																																				Page</a>
+																																		</div>
+																																	</div>
 
-       <!-- Modals -->
+																																	<!-- Modals -->
 
-<div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="winModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content winWholeModal">
-      <div class="modal-header">
-        <h5 class="modal-title" id="winModalLabel"><h1 class="winTitle">You Win!</h1></h5>          
-      </div>
-      <div class="modal-body">
-        <div id="winScreen">
-            <img class="winScreen"
+																																	<div class="modal fade"
+																																		id="winModal"
+																																		tabindex="-1"
+																																		role="dialog"
+																																		aria-labelledby="winModalLabel"
+																																		aria-hidden="true">
+																																		<div class="modal-dialog"
+																																			role="document">
+																																			<div
+																																				class="modal-content winWholeModal">
+																																				<div
+																																					class="modal-header">
+																																					<h5 class="modal-title"
+																																						id="winModalLabel">
+																																						<h1
+																																							class="winTitle">
+																																							You
+																																							Win!
+																																						</h1>
+																																					</h5>
+																																				</div>
+																																				<div
+																																					class="modal-body">
+																																					<div
+																																						id="winScreen">
+																																						<img class="winScreen"
             src="./assets/images/pikachu-hat.png"/>
-             <h2>Looks like you matched all the pokemon! <br> Well Done!</h2>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="index.html" class="btn-sm btn-secondary modalReturn">Return to Title</a>
-      </div>
-    </div>
-  </div>
-</div>
+																																						<h2>Looks
+																																							like
+																																							you
+																																							matched
+																																							all
+																																							the
+																																							pokemon!
+																																							<br> Well Done!</h2>
+																																					</div>
+																																				</div>
+																																				<div
+																																					class="modal-footer">
+																																					<a href="index.html"
+																																						class="btn-sm btn-secondary modalReturn">Return
+																																						to
+																																						Title</a>
+																																				</div>
+																																			</div>
+																																		</div>
+																																	</div>
 
-<div class="modal fade" id="timeUpModal" tabindex="-1" role="dialog" aria-labelledby="timeUpModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content timeUpWholeModal">
-      <div class="modal-header">
-        <h5 class="modal-title" id="timeUpModalLabel"><h1 class="timeUpTitle">Time Up!</h1></h5>          
-      </div>
-      <div class="modal-body">
-        <div id="timeUpScreen">
-            <img class="loseScreen"
+																																	<div class="modal fade"
+																																		id="timeUpModal"
+																																		tabindex="-1"
+																																		role="dialog"
+																																		aria-labelledby="timeUpModalLabel"
+																																		aria-hidden="true">
+																																		<div class="modal-dialog"
+																																			role="document">
+																																			<div
+																																				class="modal-content timeUpWholeModal">
+																																				<div
+																																					class="modal-header">
+																																					<h5 class="modal-title"
+																																						id="timeUpModalLabel">
+																																						<h1
+																																							class="timeUpTitle">
+																																							Time
+																																							Up!
+																																						</h1>
+																																					</h5>
+																																				</div>
+																																				<div
+																																					class="modal-body">
+																																					<div
+																																						id="timeUpScreen">
+																																						<img class="loseScreen"
             src="./assets/images/sobble.png"/>
-             <h2>Looks like you ran out of time! <br> Better luck next time!</h2>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="index.html" class="btn-sm btn-primary modalReturn">Return to Title</a>
-      </div>
-    </div>
-  </div>
-</div>
+																																						<h2>Looks
+																																							like
+																																							you
+																																							ran
+																																							out
+																																							of
+																																							time!
+																																							<br> Better luck next time!</h2>
+																																					</div>
+																																				</div>
+																																				<div
+																																					class="modal-footer">
+																																					<a href="index.html"
+																																						class="btn-sm btn-primary modalReturn">Return
+																																						to
+																																						Title</a>
+																																				</div>
+																																			</div>
+																																		</div>
+																																	</div>
 
-    <!--Scripts-->
+																																	<!--Scripts-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js" integrity="sha512-1icA56H/QfnWMmygJLor4dORvI+7Kurg9CfXSDeJmyMJQL98LfPRk/UwCmi7NoZwbUwxMoI0tc2gJqG/Uu+ecA==" crossorigin="anonymous"></script>
+																																	<script
+																																		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"
+																																		integrity="sha512-1icA56H/QfnWMmygJLor4dORvI+7Kurg9CfXSDeJmyMJQL98LfPRk/UwCmi7NoZwbUwxMoI0tc2gJqG/Uu+ecA=="
+																																		crossorigin="anonymous">
+																																	</script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+																																	<script
+																																		src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+																																		integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+																																		crossorigin="anonymous">
+																																	</script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>    
-    <script src="assets/js/scripts.js"></script>
+																																	<script
+																																		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+																																		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+																																		crossorigin="anonymous">
+																																	</script>
+																																	<script
+																																		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+																																		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+																																		crossorigin="anonymous">
+																																	</script>
+																																	<script
+																																		src="assets/js/scripts.js">
+																																	</script>
 
-  </body>
+</body>
+
 </html>
