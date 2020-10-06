@@ -296,6 +296,12 @@ margin: 0 auto;
     padding-top:10px;
     
 }
+.rules-box-button {
+    font-size:2vh;
+}
+.next-button {
+    font-size:1.5vh;
+}
 }
 
 @media screen and (max-width: 568px) {
@@ -327,4 +333,14 @@ margin: 0 auto;
   #league-masterball .ball-row {
     height: 11vh;
   }
+
+}
+
+@media screen and (max-width: 320px) {
+      .rules-box-button {
+    font-size:1.7vh;
+}
+.next-button {
+    font-size:1vh;
+}
 }
