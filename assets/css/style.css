@@ -6,6 +6,7 @@
 
 
 
+
 body {
   background-image: url("../../assets/images/grass.png");
   background-size: cover;
@@ -65,6 +66,7 @@ h2 {
 }
 
 .game-box-card {
+  display: none;
   background-color: grey;
   opacity: 90%;
   padding-top: 10px;

@@ -62,6 +62,7 @@ function initialise() {
 
   resetLevels();
   document.getElementById("league-levels").style.display = "block";
+  $("#league-levels").show();
 
 }
 
@@ -310,3 +311,4 @@ $(".modalReturn").click(function () {
 });
 $(".time-remaining").html(" " + 60 + " ");
 $(".progressBar").attr("value", "0")
+
