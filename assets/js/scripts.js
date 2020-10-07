@@ -123,7 +123,7 @@ var numberOfPokemon = 0;
 var ballOpenSound = new Audio("./assets/sounds/SFX_BALL_POOF.wav");
 var ballCloseSound = new Audio("./assets/sounds/SFX_BALL_TOSS.wav");
 var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
-var winSound = new Audio("./assets/sounds/SFX_GET_LEVEL_UP.wav");
+var winSound = new Audio("./assets/sounds/SFX_LEVEL_UP.wav");
 var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
 
 /* Game mode difficulty initialiser */
