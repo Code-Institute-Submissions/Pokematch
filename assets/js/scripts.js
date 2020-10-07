@@ -205,6 +205,8 @@ function initialiseLevel(level) {
 
       $("#" + previousPokeballName).show();
       matchingSound.play();
+      ballOpenSound.pause();
+
       $(this).show();
 
       matchedPokemon++;
@@ -222,6 +224,7 @@ function initialiseLevel(level) {
         clearInterval(gameOverTimer);   // stop timer
 
         winTimer = setInterval(function () {
+            winSound.play();
           clearInterval(winTimer);
           
           $('#winModal').modal({
@@ -234,11 +237,12 @@ function initialiseLevel(level) {
     
 }
     else if (previousPokemonName != currentPokemonName) {
+        
     //no match
         console.log("previousPokemonName does not match currentPokemonName");
 
         $(".ball-match").attr("disabled", "disabled");
-
+        ballCloseSound.play();
       let pokeballHideTimer = setInterval(function () {
         clearInterval(pokeballHideTimer);
         console.log("timer up");
@@ -277,7 +281,9 @@ $("#start").click(function () {
   let timeleft = 59;
   gameOverTimer = setInterval(function () {
     if (timeleft <= -1) {
+        
         clearInterval(gameOverTimer);
+        loseSound.play();
         $(".time-remaining").html(" " + 60 + " ");
         document.getElementById("pokeProgressBar").value = 0;
         document.getElementById("greatProgressBar").value = 0;
