@@ -284,7 +284,7 @@ $("#start").click(function () {
   let timeleft = 59;
   gameOverTimer = setInterval(function () {
     if (timeleft <= -1) {
-        
+        loseSound.play();
         clearInterval(gameOverTimer);
         
         $(".time-remaining").html(" " + 60 + " ");
