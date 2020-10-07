@@ -220,6 +220,7 @@ function initialiseLevel(level) {
         // Win condition     
       if (matchedPokemon == numberOfPokemon)
       {
+          matchingSound.pause();
           winSound.play();
         $(".ball-match").attr("disabled", "disabled");    // disable all pokeballs
         clearInterval(gameOverTimer);   // stop timer
