@@ -220,11 +220,12 @@ function initialiseLevel(level) {
         // Win condition     
       if (matchedPokemon == numberOfPokemon)
       {
+          winSound.play();
         $(".ball-match").attr("disabled", "disabled");    // disable all pokeballs
         clearInterval(gameOverTimer);   // stop timer
+            
 
-        winTimer = setInterval(function () {
-            winSound.play();
+        winTimer = setInterval(function () {            
           clearInterval(winTimer);
           
           $('#winModal').modal({
@@ -243,6 +244,7 @@ function initialiseLevel(level) {
 
         $(".ball-match").attr("disabled", "disabled");
         ballCloseSound.play();
+        ballOpenSound.pause();
       let pokeballHideTimer = setInterval(function () {
         clearInterval(pokeballHideTimer);
         console.log("timer up");
@@ -283,7 +285,7 @@ $("#start").click(function () {
     if (timeleft <= -1) {
         
         clearInterval(gameOverTimer);
-        loseSound.play();
+        
         $(".time-remaining").html(" " + 60 + " ");
         document.getElementById("pokeProgressBar").value = 0;
         document.getElementById("greatProgressBar").value = 0;
