@@ -119,6 +119,13 @@ var currentPokeballName = null;
 var matchedPokemon = 0;
 var numberOfPokemon = 0;
 
+/*Sounds */
+var ballOpenSound = new Audio("./assets/sounds/SFX_BALL_POOF.wav");
+var ballCloseSound = new Audio("./assets/sounds/SFX_BALL_TOSS.wav");
+var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
+var winSound = new Audio("./assets/sounds/SFX_GET_LEVEL_UP.wav");
+var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
+
 /* Game mode difficulty initialiser */
 function initialiseLevel(level) {
 
@@ -169,6 +176,8 @@ function initialiseLevel(level) {
 
   /* Remember the previous pokemon clicked */
   $(".ball-match").click(function () { 
+
+    ballOpenSound.play();
       
     $(this).effect( "bounce", "slow" );
       
@@ -195,6 +204,7 @@ function initialiseLevel(level) {
       console.log("previousPokemonName matches currentPokemonName");
 
       $("#" + previousPokeballName).show();
+      matchingSound.play();
       $(this).show();
 
       matchedPokemon++;
