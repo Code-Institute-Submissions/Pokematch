@@ -107,7 +107,7 @@ Colours have been chosen that reflect the pokemon logo, and some of the themes f
 
 - Click here to see the project [Wireframes](wireframes.md)
 
-### Logo
+### Image modifications
 
 - [GIMP](https://www.gimp.org/) was used to resize the grass image so it was lower pixals and would load quicker 
 
@@ -198,6 +198,7 @@ To complete after bug testing
 ### Testing Methods
 
 For information on the testing, follow the link to the document [here](testing.md)
+
 ##### Back to [top](#table-of-contents)
 ---
 
@@ -217,7 +218,7 @@ For information on the testing, follow the link to the document [here](testing.m
 
 - Deployed Site:
 
-  - https://adam181189.github.io/cat-union/
+  - https://adam181189.github.io/Pokematch/
 
 *In order to deploy the website, the following was actioned:
 1. Navigate to GitHub repository:
