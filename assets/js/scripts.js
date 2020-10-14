@@ -1,11 +1,31 @@
+/*Variables*/
 let level = null;
 let levelPokeballImage = null;
 
 var gameOverTimer;
 
+/*Randomised pokemon variables*/
+var randomisedPokemon = [];
+
+var previousPokemonName = null;
+var previousPokemonImage = null;
+var previousPokeballName = null;
+
+var currentPokemonName = null;
+var currentPokemonImage = null;
+var currentPokeballName = null;
+
+var matchedPokemon = 0;
+var numberOfPokemon = 0;
+
+/*Sound variables*/
+var ballOpenSound = new Audio("./assets/sounds/SFX_BALL_POOF.wav");
+var ballCloseSound = new Audio("./assets/sounds/SFX_BALL_TOSS.wav");
+var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
+var winSound = new Audio("./assets/sounds/SFX_LEVEL_UP.wav");
+var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
 
 /* Character Arrays */
-
 const allPokemon=[{
         name:"Pikachu",
         img:"./assets/images/pikachu.png"
@@ -41,15 +61,20 @@ const allPokemon=[{
 ];
 
 /* League difficulty */
-
 $(".ball-levels").click(function () {
+ 
+    if($(".ball-levels").is(":focus")){
 
-  level = $(this).attr("id");
+         level = $(this).attr("id");
+    }
+    else{
+        return;
+    }
+   
 
 });
 
 /* Card calling */
-
 function resetLevels() {
 
   $(".game-box-card").hide();
@@ -57,7 +82,6 @@ function resetLevels() {
 }
 
 /* On initialise */
-
 function initialise() {
 
   resetLevels();
@@ -69,7 +93,6 @@ function initialise() {
 window.onload = initialise;
 
 /* How to play Cards */
-
 $("#rules").click(function () {
   resetLevels();
   document.getElementById("game-rules1").style.display = "block";
@@ -105,26 +128,6 @@ $(".return-button").click(function () {
   resetLevels();
   document.getElementById("league-levels").style.display = "block"
 });
-
-var randomisedPokemon = [];
-
-var previousPokemonName = null;
-var previousPokemonImage = null;
-var previousPokeballName = null;
-
-var currentPokemonName = null;
-var currentPokemonImage = null;
-var currentPokeballName = null;
-
-var matchedPokemon = 0;
-var numberOfPokemon = 0;
-
-/*Sounds */
-var ballOpenSound = new Audio("./assets/sounds/SFX_BALL_POOF.wav");
-var ballCloseSound = new Audio("./assets/sounds/SFX_BALL_TOSS.wav");
-var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
-var winSound = new Audio("./assets/sounds/SFX_LEVEL_UP.wav");
-var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
 
 /* Game mode difficulty initialiser */
 function initialiseLevel(level) {
@@ -271,7 +274,6 @@ function initialiseLevel(level) {
 };
 
 /* Game start */
-
 $("#start").click(function () {
 
   if (level == null)
@@ -310,7 +312,6 @@ $("#start").click(function () {
 });
 
 /* Randomise Pokemon in Pokeballs */
-
 function randomisePokemon(noOfPokemon) {
 
   var pokeballArray = allPokemon.slice(0, noOfPokemon).map(
