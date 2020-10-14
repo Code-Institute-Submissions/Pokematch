@@ -274,6 +274,9 @@ function initialiseLevel(level) {
 
 $("#start").click(function () {
 
+  if (level == null)
+    return;
+
   resetLevels();
   initialiseLevel(level);
   
