@@ -48,6 +48,8 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 
 ### Timer starts even if a difficulty Pokeball is not selected
 
+- Set a return to the start function if the level = null. 
+
 ### Sound effects too loud for some players
 
 ### Ball doesn't always match Sound
