@@ -33,7 +33,7 @@ h2 {
 }
 
 .fa-volume-up{
-    font-size:2em;
+    font-size:5vh;
     position:fixed;
     top:20px;
     right:25px;
@@ -46,7 +46,7 @@ h2 {
 }
 
 .fa-volume-mute{
-    font-size:2em;
+    font-size:5vh;
     position:fixed;
     top:20px;
     right:25px;
@@ -329,6 +329,7 @@ margin: 0 auto;
 .next-button {
     font-size:1.5vh;
 }
+
 }
 
 @media screen and (max-width: 568px) {
@@ -341,10 +342,10 @@ margin: 0 auto;
     height: 8vh;
     width: 8vh;
   }
+    #title {
+        left:140px;
+    }
 
-  #league-masterball .ball-row {
-    height: 11vh;
-  }
 }
 @media screen and (max-width: 538px) {
   .ball-levels {
@@ -361,13 +362,28 @@ margin: 0 auto;
     height: 11vh;
   }
 
+    #title {
+        left:90px;
+    }
+
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
+#title {
+        left:80px;
+    }
+}
+
+@media screen and (max-width: 340px) {
       .rules-box-button {
     font-size:1.7vh;
 }
 .next-button {
     font-size:1vh;
 }
+
+#title {
+        left:60px;
+    }
+
 }
