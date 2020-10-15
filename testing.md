@@ -52,7 +52,11 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 
 ### Sound effects too loud for some players
 
-- 
+- Added a mute option to the game by using toggles on the font awesome icons
+
+### Sound/Mute icon disappeared from mobile view
+
+-
 
 ### Ball doesn't always match Sound
 
