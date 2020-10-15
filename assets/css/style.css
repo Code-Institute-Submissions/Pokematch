@@ -6,7 +6,6 @@
 
 
 
-
 body {
   background-image: url("../../assets/images/grass.png");
   background-size: cover;
@@ -31,6 +30,32 @@ body::after {
 h2 {
   font-size: 3vh;
   margin-bottom: 10px;
+}
+
+.fa-volume-up{
+    font-size:2em;
+    position:fixed;
+    top:20px;
+    right:25px;
+    color: #3a6eb8;
+    z-index:0;
+}
+
+.fa-volume-up:hover{
+    cursor: pointer;
+}
+
+.fa-volume-mute{
+    font-size:2em;
+    position:fixed;
+    top:20px;
+    right:25px;
+    color: #3a6eb8;
+    z-index:0;
+}
+
+.fa-volume-mute:hover{
+    cursor: pointer;
 }
 
 /*Title Section*/

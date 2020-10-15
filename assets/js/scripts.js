@@ -326,7 +326,7 @@ function randomisePokemon(noOfPokemon) {
 };
 
 
-    /* Lose Modal */
+/* Lose Modal */
 $(".modalReturn").click(function () {
   $('#timeUpModal').modal("hide");
   resetLevels();
@@ -335,3 +335,13 @@ $(".modalReturn").click(function () {
 $(".time-remaining").html(" " + 60 + " ");
 $(".progressBar").attr("value", "0")
 
+$( document ).ready(function() {
+
+    /* Sound effects */
+    $("#volume-up").click(function (){
+        $(this).find("i").toggleClass("fa-volume-up fa-volume-mute");
+           
+    }); 
+
+    
+});

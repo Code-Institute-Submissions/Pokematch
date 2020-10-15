@@ -101,7 +101,7 @@ Colours have been chosen that reflect the pokemon logo, and some of the themes f
 
 [Font Awesome 5.13.1](https://fontawesome.com/)
   The following 4 Font Awesome icons were used.
-  - [Sound]https://fontawesome.com/icons/volume-up?style=solid - used on page to mute website <i class="fas fa-volume-up"></i>
+  - [Sound]https://fontawesome.com/icons/volume-up?style=solid - used on page to mute website
 
 ### Wireframes
 
@@ -251,9 +251,10 @@ For information on the testing, follow the link to the document [here](testing.m
 
 - [Pixabay](https://pixabay.com/photos/grass-lawn-backdrop-background-84622/) - Grass background image
 - [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page) All other images came from this website. All images are copyrighted property of Nintendo.
+- [Sounds](https://www.sounds-resource.com/game_boy_gbc/pokemonredblueyellow/sound/17241/) All used sounds were found and downlaoded from this page.
 
 ### Acknowledgements
 
-Inspiration for this project was drawn from 
+Inspiration for this project was drawn from  
 
 ##### Back to [top](#table-of-contents)
