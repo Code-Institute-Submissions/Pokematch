@@ -19,6 +19,7 @@ var matchedPokemon = 0;
 var numberOfPokemon = 0;
 
 /*Sound variables*/
+var isMuted;
 var ballOpenSound = new Audio("./assets/sounds/SFX_BALL_POOF.wav");
 var ballCloseSound = new Audio("./assets/sounds/SFX_BALL_TOSS.wav");
 var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
@@ -340,7 +341,16 @@ $( document ).ready(function() {
     /* Sound effects */
     $("#volume-up").click(function (){
         $(this).find("i").toggleClass("fa-volume-up fa-volume-mute");
-           
+
+        isMuted = $("#volume-up>i").attr("class") == "fas fa-volume-mute";
+
+        console.log("Muted: " + isMuted);
+
+        ballOpenSound.muted = isMuted;
+        ballCloseSound.muted = isMuted;
+        matchingSound.muted = isMuted;
+        winSound.muted = isMuted; 
+        loseSound.muted = isMuted;
     }); 
 
     
