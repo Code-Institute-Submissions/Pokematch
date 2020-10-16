@@ -255,6 +255,11 @@ For information on the testing, follow the link to the document [here](testing.m
 
 ### Acknowledgements
 
-Inspiration for this project was drawn from  
+Inspiration for this project was drawn from a video game series I have enjoyed since I was a child, and the need for a simple ICT programme that the 
+children can use in my job. We can use this to assess how well the children in our group can complete a program from start to finish, and also help 
+to build up memory function skills. 
+
+I also want to thank some of the members on slack May-2020 group as they looked at my project and suggested some changes, and bugs that were in my project. 
+I also want to the thank the children at the pre school i work at for playing the game and telling me what they enjoyed about it. 
 
 ##### Back to [top](#table-of-contents)
