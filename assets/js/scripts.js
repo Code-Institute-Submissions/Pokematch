@@ -15,7 +15,7 @@ var currentPokemonName = null;
 var currentPokemonImage = null;
 var currentPokeballName = null;
 
-var matchedPokemon = 0;
+var allMatchedPokemon = 0;
 var numberOfPokemon = 0;
 
 /*Sound variables*/
@@ -142,6 +142,7 @@ function initialiseLevel(level) {
         // show level select and return
         $("#league-levels").show();
         return;
+       
     }
 
     
@@ -181,6 +182,11 @@ function initialiseLevel(level) {
   /* Remember the previous pokemon clicked */
   $(".ball-match").click(function () { 
 
+    
+    if($(this).data("matched") == "true"){
+        return;
+    }
+
     ballOpenSound.play();
       
     $(this).effect( "bounce", "slow" );
@@ -198,23 +204,24 @@ function initialiseLevel(level) {
 
     if (previousPokemonName == null){
         // if no previous, first in sequence
-      console.log("previousPokemonName is null");
-        
+      console.log("previousPokemonName is null");      
       previousPokemonName = currentPokemonName;
       previousPokeballName = $(this).attr("id");  
     }
     else if (previousPokemonName == currentPokemonName) {
       // match
       console.log("previousPokemonName matches currentPokemonName");
-
+       $("#" + previousPokeballName).data("matched", "true");
+       $("#" + currentPokeballName).data("matched", "true");
+       
       $("#" + previousPokeballName).show();
       matchingSound.play();
       ballOpenSound.pause();
 
       $(this).show();
 
-      matchedPokemon++;
-      console.log(matchedPokemon);
+      allMatchedPokemon++;
+      console.log(allMatchedPokemon);
 
       console.log
 
@@ -222,7 +229,7 @@ function initialiseLevel(level) {
       previousPokeballName = null;
 
         // Win condition     
-      if (matchedPokemon == numberOfPokemon)
+      if (allMatchedPokemon == numberOfPokemon)
       {
           matchingSound.pause();
           winSound.play();
@@ -240,6 +247,8 @@ function initialiseLevel(level) {
             $(".ball-match").removeAttr("disabled");   
         }, 1000);
     }
+
+
     
 }
     else if (previousPokemonName != currentPokemonName) {
@@ -266,7 +275,7 @@ function initialiseLevel(level) {
         currentPokeballName = null;
 
         $(".ball-match").removeAttr("disabled");    
-    }, 1000);
+    }, 1200);
 
 }
 
