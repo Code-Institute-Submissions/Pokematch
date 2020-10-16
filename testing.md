@@ -64,7 +64,14 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 
 ### By repeatedly clicking the same two pokemon that match, you can win without opening any other pokeballs. 
 
-- 
+- Corrected by adding an if statement to the first click that means it won't be clickable if the boolean in the previousPokemonName == currentPokemonName
+if statement says the data for previous and current pokeballNames are true for "matched". This has prevented the player from clicking the same two to make it win.
+
+### New bug found which meant if the player clicked the same pokemon twice, it counted as a match
+
+- Fixed by adding new variables called currentPokeballNumber and previousPokeballNumber. Then put them both as a comparison operator in the previousPokemonName = null if statement. 
+Changed previousPokemonName == currentPokemonName to (previousPokemonName == currentPokemonName) && (previouspokeballNumber != currentpokeballNumber) which reads both the currentPokeballNumber
+and the pokemon to check that the first pokemon and number (previousPokemonName == currentPokemonName) are not equal to the second pokemon and number (previouspokeballNumber != currentpokeballNumber).
 
 ### When clicking off the difficulty ball, the answer is still stored so game starts on that setting if ball is toggled off and ball isn't highlighted. 
 
