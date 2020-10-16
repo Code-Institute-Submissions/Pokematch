@@ -56,7 +56,7 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 
 ### Sound/Mute icon disappeared from mobile view
 
--
+- Fixed by changing the column bootstrap details as smaller sizes had been set to none. It now just stops at col across all platforms. 
 
 ### Ball doesn't always match Sound
 
@@ -69,6 +69,8 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 ### When clicking off the difficulty ball, the answer is still stored so game starts on that setting if ball is toggled off and ball isn't highlighted. 
 
 - 
+
+### In addition to the difficulty not being stored, a suggestion has been made by tester of adding an alert that lets the player know none of the pokeballs have been selected.
 
 ## Player opinions
 
