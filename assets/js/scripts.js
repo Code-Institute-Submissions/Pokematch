@@ -8,10 +8,12 @@ var gameOverTimer;
 var randomisedPokemon = [];
 
 var previousPokemonName = null;
+var previouspokeballNumber = null;
 var previousPokemonImage = null;
 var previousPokeballName = null;
 
 var currentPokemonName = null;
+var currentpokeballNumber = null;
 var currentPokemonImage = null;
 var currentPokeballName = null;
 
@@ -176,13 +178,15 @@ function initialiseLevel(level) {
     var pokeballName = level+(i+1);
     $("#" + pokeballName).attr("title", randomisedPokemon[i].name);
     $("#" + pokeballName).data("pokemon-name", randomisedPokemon[i].name);
+    $("#" + pokeballName).data("pokeball-number", i+1);
     $("#" + pokeballName).data("pokemon-img", randomisedPokemon[i].img);
   }
 
-  /* Remember the previous pokemon clicked */
+  /* Pokeball clicked */
   $(".ball-match").click(function () { 
-
     
+
+
     if($(this).data("matched") == "true"){
         return;
     }
@@ -194,21 +198,24 @@ function initialiseLevel(level) {
     var isDisabled = $(this).attr("disabled") == "disabled";
     if (isDisabled) { return; }
 
-    console.log("IsDisabled: " + isDisabled);
-
     currentPokemonName = $(this).data("pokemon-name");
+    currentpokeballNumber = $(this).data("pokeball-number");
     currentPokemonImage = $(this).data("pokemon-img");
     currentPokeballName = $(this).attr("id");
 
     $(this).attr("src", currentPokemonImage);
 
+    console.log("Prev: " + previousPokemonName + "" + previouspokeballNumber + ", Curr: " + currentPokemonName + currentpokeballNumber);
+
+
     if (previousPokemonName == null){
         // if no previous, first in sequence
       console.log("previousPokemonName is null");      
       previousPokemonName = currentPokemonName;
+      previouspokeballNumber = currentpokeballNumber;
       previousPokeballName = $(this).attr("id");  
     }
-    else if (previousPokemonName == currentPokemonName) {
+    else if ((previousPokemonName == currentPokemonName) && (previouspokeballNumber != currentpokeballNumber)) {
       // match
       console.log("previousPokemonName matches currentPokemonName");
        $("#" + previousPokeballName).data("matched", "true");
