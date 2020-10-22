@@ -140,7 +140,7 @@ $("#finish_to_title").click(function () {
 $(".return-button").click(function () {
   difficultySelect = undefined;
   resetLevels();
-  document.getElementById("league-levels").style.display = "block"
+  document.getElementById("league-levels").style.display = "block";
   choose.rulesOff();
 });
 
@@ -179,14 +179,14 @@ function initialiseLevel(level) {
     let pokemon = randomisePokemon(numberOfPokemon);
 
     // flatten to single array of (num of pokeballs)
-  for (var i=0; i<pokemon.length; i++) {
+  for (let i=0; i<pokemon.length; i++) {
     randomisedPokemon.push(pokemon[i]);
     randomisedPokemon.push(pokemon[i]);
   }
   randomisedPokemon = randomisedPokemon.sort(() => Math.random() - 0.5);
 
   // assign pokemon titles (tooltips) to pokeballs - testing purposes only
-  for (var i=0; i<randomisedPokemon.length; i++) {
+  for (let i=0; i<randomisedPokemon.length; i++) {
     var pokeballName = level+(i+1);
     $("#" + pokeballName).attr("title", randomisedPokemon[i].name);
     $("#" + pokeballName).data("pokemon-name", randomisedPokemon[i].name);
@@ -241,8 +241,6 @@ function initialiseLevel(level) {
 
       allMatchedPokemon++;
       console.log(allMatchedPokemon);
-
-      console.log
 
       previousPokemonName = null;
       previousPokeballName = null;
@@ -300,7 +298,7 @@ function initialiseLevel(level) {
 
 }); 
 
-};
+}
 
 /* Game start */
 $("#start").click(function () {
@@ -360,7 +358,7 @@ function randomisePokemon(noOfPokemon) {
 
   return pokeballArray;
 
-};
+}
 
 
 /* Lose Modal */
@@ -370,7 +368,7 @@ $(".modalReturn").click(function () {
   document.getElementById("league-levels").style.display = "block";
 });
 $(".time-remaining").html(" " + 60 + " ");
-$(".progressBar").attr("value", "0")
+$(".progressBar").attr("value", "0");
 
 $( document ).ready(function() {
 
