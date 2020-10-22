@@ -296,8 +296,9 @@ function initialiseLevel(level) {
 /* Game start */
 $("#start").click(function () {
 
+  selected.play();
+    
   if (level == null)
-    denied.play();
     return;
 
   resetLevels();
