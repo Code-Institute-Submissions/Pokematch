@@ -99,4 +99,4 @@ but the currently clicked pokeball became 100% opacity.
 - If tweaking the game for adults, pokeball and greatball would be the same as the masterball level, but the timer would get shorter each time.
 - Adults might enjoy use of the timer which informs the player of how long it took to win. 
 
-##### Back to [readme](readme.md)
+##### Back to [readme](README.md)

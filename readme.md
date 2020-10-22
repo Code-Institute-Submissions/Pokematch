@@ -189,8 +189,10 @@ Find a way to have music play on lose screen modal for mobile devices.
 
   - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) "Congratulations! No Error Found. This document validates as CSS level 3 + SVG !"
 
-- Jasmine
+- JSHint
 
+  - [JSHint javascript Validator](https://jshint.com/) 
+ 
 ### Chrome's DevTools Audit report
 
 To complete after bug testing 
@@ -252,6 +254,7 @@ For information on the testing, follow the link to the document [here](testing.m
 - [Pixabay](https://pixabay.com/photos/grass-lawn-backdrop-background-84622/) - Grass background image
 - [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page) All other images came from this website. All images are copyrighted property of Nintendo.
 - [Sounds](https://www.sounds-resource.com/game_boy_gbc/pokemonredblueyellow/sound/17241/) All used sounds were found and downlaoded from this page.
+- [Hourglass image](https://www.clipartmax.com/middle/m2i8d3K9i8m2A0Z5_hourglass-clipart-image-hour-glass-clip-art/) Used as part of the timer.
 
 ### Acknowledgements
 
