@@ -102,37 +102,44 @@ window.onload = initialise;
 $("#rules").click(function () {
   resetLevels();
   document.getElementById("game-rules1").style.display = "block";
+  selected.play();
 });
 
 $("#next_button1").click(function () {
   resetLevels();
   document.getElementById("game-rules2").style.display = "block";
+  choose.play();
 });
 
 $("#next_button2").click(function () {
   resetLevels();
   document.getElementById("game-rules3").style.display = "block";
+  choose.play();
 });
 
 $("#next_button3").click(function () {
   resetLevels();
   document.getElementById("game-rules4").style.display = "block";
+  choose.play();
 });
 
 $("#next_button4").click(function () {
   resetLevels();
   document.getElementById("game-rules5").style.display = "block";
+  choose.play();
 });
 
 $("#finish_to_title").click(function () {
   resetLevels();
   document.getElementById("league-levels").style.display = "block";
+  choose.play();
 });
 
 $(".return-button").click(function () {
   difficultySelect = undefined;
   resetLevels();
   document.getElementById("league-levels").style.display = "block"
+  choose.play();
 });
 
 /* Game mode difficulty initialiser */
@@ -298,10 +305,9 @@ $("#start").click(function () {
 
   
     
-  if (level == null){
-      alert("please select a difficulty");
-      selected.pause();
+  if (level == null){ 
       denied.play();
+      alert("please select a difficulty");     
       return;  
   }
   else {
