@@ -27,6 +27,9 @@ var ballCloseSound = new Audio("./assets/sounds/SFX_BALL_TOSS.wav");
 var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
 var winSound = new Audio("./assets/sounds/SFX_LEVEL_UP.wav");
 var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
+var choose = new Audio("./assets/sounds/SFX_PRESS_AB.wav");
+var selected = new Audio("./assets/sounds/SFX_PURCHASE.wav")
+var denied = new Audio("./assets/sounds/DENIED.wav")
 
 /* Character Arrays */
 const allPokemon=[{
@@ -68,6 +71,7 @@ $(".ball-levels").css("cursor", "pointer");     // iOS fix
 $(".ball-levels").click(function () {
     
     $(".ball-levels").css("opacity", "50%");
+    choose.play();
     $(this).css("opacity", "100%");
 
          level = $(this).attr("id");
@@ -293,6 +297,7 @@ function initialiseLevel(level) {
 $("#start").click(function () {
 
   if (level == null)
+    denied.play();
     return;
 
   resetLevels();
