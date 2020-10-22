@@ -296,19 +296,20 @@ function initialiseLevel(level) {
 /* Game start */
 $("#start").click(function () {
 
-  selected.play();
+  
     
   if (level == null){
       alert("please select a difficulty");
       selected.pause();
-    denied.play();
-    return;
-    
-    
+      denied.play();
+      return;  
   }
+  else {
 
+  selected.play();
   resetLevels();
   initialiseLevel(level);
+  }
   
   /* Timer */ 
   
