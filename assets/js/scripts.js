@@ -299,9 +299,10 @@ $("#start").click(function () {
   selected.play();
     
   if (level == null)
+    return;
     selected.pause();
     denied.play();
-    return;
+    alert("please select a difficulty");
 
   resetLevels();
   initialiseLevel(level);
