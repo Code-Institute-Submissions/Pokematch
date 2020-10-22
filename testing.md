@@ -80,7 +80,7 @@ but the currently clicked pokeball became 100% opacity.
 
 ### iOS issue in which a pokeball couldnt be clicked
 
-- 
+- Solved by changing the input to img as above. Removed an on focus function added to the on click for ball-levels, which was interfering with iOS features.
 
 ### In addition to the difficulty not being stored, a suggestion has been made by tester of adding an alert that lets the player know none of the pokeballs have been selected.
 
