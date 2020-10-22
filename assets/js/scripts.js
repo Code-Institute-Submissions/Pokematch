@@ -299,6 +299,8 @@ $("#start").click(function () {
   selected.play();
     
   if (level == null)
+    selected.pause();
+    denied.play();
     return;
 
   resetLevels();
