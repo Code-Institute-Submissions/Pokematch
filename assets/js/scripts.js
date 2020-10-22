@@ -63,8 +63,11 @@ const allPokemon=[{
     }
 ];
 
+$(".ball-levels").css("cursor", "pointer");     // iOS fix
 /* League difficulty */
 $(".ball-levels").click(function () {
+
+    
  
     if($(".ball-levels").is(":focus")){
 
