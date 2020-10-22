@@ -298,11 +298,14 @@ $("#start").click(function () {
 
   selected.play();
     
-  if (level == null)
-    return;
-    selected.pause();
+  if (level == null){
+      alert("please select a difficulty");
+      selected.pause();
     denied.play();
-    alert("please select a difficulty");
+    return;
+    
+    
+  }
 
   resetLevels();
   initialiseLevel(level);
