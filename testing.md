@@ -75,6 +75,11 @@ and the pokemon to check that the first pokemon and number (previousPokemonName 
 
 ### When clicking off the difficulty ball, the answer is still stored so game starts on that setting if ball is toggled off and ball isn't highlighted. 
 
+- Corrected by changing the input images for ball-levels into img. The click function for ball-levels was given a jquery code which kept non clicked ball-level pokeballs at 50% opacity,
+but the currently clicked pokeball became 100% opacity.
+
+### iOS issue in which a pokeball couldnt be clicked
+
 - 
 
 ### In addition to the difficulty not being stored, a suggestion has been made by tester of adding an alert that lets the player know none of the pokeballs have been selected.
