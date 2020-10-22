@@ -4,7 +4,9 @@
   cursor: pointer;
 }
 
-
+.ball-levels {
+  cursor: pointer;
+}
 
 body {
   background-image: url("../../assets/images/grass.png");
