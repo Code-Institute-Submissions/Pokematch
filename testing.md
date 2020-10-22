@@ -44,6 +44,9 @@
 - Throughout the early years education documentation in the UK (Development Matters in the Early Years Foundation Stage), there are statements that encourage the development of technbology skills, and physical skills. This game covers goals such as "•Shows skill in making toys work by pressing parts or lifting
 flaps to achieve effects such as sound, movements or new images.", "•Completes a simple program on a computer.", "Children show good control and co-ordination in large and small movements.". This game is built with just some of these aspects in mind.
 
+### As a user I want to be able to control audible effects (user asked for this after testing)
+- Added a mute option to sound effects
+
 ## Bugs
 
 ### Timer starts even if a difficulty Pokeball is not selected
@@ -96,4 +99,4 @@ but the currently clicked pokeball became 100% opacity.
 - If tweaking the game for adults, pokeball and greatball would be the same as the masterball level, but the timer would get shorter each time.
 - Adults might enjoy use of the timer which informs the player of how long it took to win. 
 
-##### Back to [readme](README.md)
+##### Back to [readme](readme.md)

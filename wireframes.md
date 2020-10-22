@@ -24,5 +24,5 @@
 
 <img src="assets/wireframesImg/Masterball level card.png"> 
 
-##### Back to [readme](README.md)
+##### Back to [readme](readme.md)
  
