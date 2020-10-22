@@ -29,7 +29,9 @@ var winSound = new Audio("./assets/sounds/SFX_LEVEL_UP.wav");
 var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
 var choose = new Audio("./assets/sounds/SFX_PRESS_AB.wav");
 var selected = new Audio("./assets/sounds/SFX_PURCHASE.wav")
-var denied = new Audio("./assets/sounds/DENIED.wav")
+var denied = new Audio("./assets/sounds/SFX_DENIED.wav")
+var rulesOn = new Audio("./assets/sounds/SFX_TURN_ON_PC.wav")
+var rulesOff = new Audio("./assets/sounds/SFX_TURN_OFF_PC.wav")
 
 /* Character Arrays */
 const allPokemon=[{
@@ -102,7 +104,7 @@ window.onload = initialise;
 $("#rules").click(function () {
   resetLevels();
   document.getElementById("game-rules1").style.display = "block";
-  selected.play();
+  selected.rulesOn();
 });
 
 $("#next_button1").click(function () {
@@ -139,7 +141,7 @@ $(".return-button").click(function () {
   difficultySelect = undefined;
   resetLevels();
   document.getElementById("league-levels").style.display = "block"
-  choose.play();
+  choose.rulesOff();
 });
 
 /* Game mode difficulty initialiser */
