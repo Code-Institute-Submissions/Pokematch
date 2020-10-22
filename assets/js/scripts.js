@@ -28,10 +28,10 @@ var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
 var winSound = new Audio("./assets/sounds/SFX_LEVEL_UP.wav");
 var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
 var choose = new Audio("./assets/sounds/SFX_PRESS_AB.wav");
-var selected = new Audio("./assets/sounds/SFX_PURCHASE.wav")
-var denied = new Audio("./assets/sounds/SFX_DENIED.wav")
-var rulesOn = new Audio("./assets/sounds/SFX_TURN_ON_PC.wav")
-var rulesOff = new Audio("./assets/sounds/SFX_TURN_OFF_PC.wav")
+var selected = new Audio("./assets/sounds/SFX_PURCHASE.wav");
+var denied = new Audio("./assets/sounds/SFX_DENIED.wav");
+var rulesOn = new Audio("./assets/sounds/SFX_TURN_ON_PC.wav");
+var rulesOff = new Audio("./assets/sounds/SFX_TURN_OFF_PC.wav");
 
 /* Character Arrays */
 const allPokemon=[{
@@ -387,6 +387,11 @@ $( document ).ready(function() {
         matchingSound.muted = isMuted;
         winSound.muted = isMuted; 
         loseSound.muted = isMuted;
+        selected.muted = isMuted;
+        denied.muted = isMuted;
+        choose.muted = isMuted;
+        rulesOn.muted = isMuted; 
+        rulesOff.muted = isMuted;
     }); 
 
     
