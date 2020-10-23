@@ -202,7 +202,8 @@ function initialiseLevel(level) {
     if($(this).data("matched") == "true"){
         return;
     }
-
+    matchingSound.pause();
+    ballOpenSound.pause();
     ballOpenSound.play();
       
     $(this).effect( "bounce", "slow" );
@@ -274,8 +275,9 @@ function initialiseLevel(level) {
         console.log("previousPokemonName does not match currentPokemonName");
 
         $(".ball-match").attr("disabled", "disabled");
-        ballCloseSound.play();
         ballOpenSound.pause();
+        ballCloseSound.play();
+       
       let pokeballHideTimer = setInterval(function () {
         clearInterval(pokeballHideTimer);
         console.log("timer up");
