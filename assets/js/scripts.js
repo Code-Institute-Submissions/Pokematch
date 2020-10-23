@@ -134,14 +134,14 @@ $("#next_button4").click(function () {
 $("#finish_to_title").click(function () {
   resetLevels();
   document.getElementById("league-levels").style.display = "block";
-  choose.play();
+  rulesOff.play();
 });
 
 $(".return-button").click(function () {
   difficultySelect = undefined;
   resetLevels();
   document.getElementById("league-levels").style.display = "block";
-  rulesOff.play();
+  choose.play();
 });
 
 /* Game mode difficulty initialiser */
