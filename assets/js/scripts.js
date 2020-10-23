@@ -104,7 +104,7 @@ window.onload = initialise;
 $("#rules").click(function () {
   resetLevels();
   document.getElementById("game-rules1").style.display = "block";
-  selected.rulesOn();
+  rulesOn.play();
 });
 
 $("#next_button1").click(function () {
@@ -141,7 +141,7 @@ $(".return-button").click(function () {
   difficultySelect = undefined;
   resetLevels();
   document.getElementById("league-levels").style.display = "block";
-  choose.rulesOff();
+  rulesOff.play();
 });
 
 /* Game mode difficulty initialiser */
