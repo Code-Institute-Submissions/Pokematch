@@ -1,6 +1,6 @@
 # Pokemon Matching Pairs Testing
 
-<img src="assets/images/poke-logo.png" width="400" height="230" />
+<img src="assets/images/poke-logo.png" width="500" height="230" />
 
 ---
 
@@ -74,10 +74,6 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 ### Sound/Mute icon disappeared from mobile view
 
 - Fixed by changing the column bootstrap details as smaller sizes had been set to none. It now just stops at col across all platforms. 
-
-### Ball doesn't always match Sound
-
-- Added a matchingSound and ballclose on pause to prevent overlapping. 
 
 ### By repeatedly clicking the same two pokemon that match, you can win without opening any other pokeballs. 
 
