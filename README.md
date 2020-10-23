@@ -83,6 +83,7 @@ This game has been Created with young children in mind. (3-7 year olds)
 
 - [Bootstrap](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
+- [jQuery Ui](https://api.jqueryui.com/) (using for animations (pokemon shaking)
 
 ### Typography
 
@@ -225,7 +226,7 @@ For information on the testing, follow the link to the document [here](testing.m
 *In order to deploy the website, the following was actioned:
 1. Navigate to GitHub repository:
     - [adam181189 repository](https://github.com/adam181189?tab=repositories)
-2. Open the cat-union repository:
+2. Open the Pokematch repository:
     - [Pokematch repository](https://github.com/adam181189/Pokematch) 
 3. Click on the **Settings** tab at the top:
     - [Settings](https://github.com/adam181189/Pokematch/settings)

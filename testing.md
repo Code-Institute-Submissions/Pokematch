@@ -12,22 +12,32 @@
 
 - The game is enjoyable and visually appealing to the players. 
 
+<img src="assets/images/gameplay.png">
+
 ### As a user, I want to choose a different experience depending on the difficulty. 
 
 -  The game is approachable for all young children, with a different level of difficulty depending on the age, and for extra challenge.
+
+<img src="assets/images/difficulty.png">
 
 ### As a user, I want to know if I lose
 
 - A timer is added to the game from the start of a round, which on reaching 0, a modal comes up to inform the player that it is a game over.
 
+<img src="assets/images/losing.png">
+
 ### As a user, I want to be rewarded with recognition for winning. 
 
 - On all pokemon being free from their pokeballs due to full matches, a modal comes up to inform the player that they have won the game
+
+<img src="assets/images/winning.png">
 
 ### As a user, I want some instructions so I know what to do
 
 - There is an option on the main menu which says "How To Play" which explains the rules of the game and what you have to do. 
 - - (May need to be tweaked to create more child friendly language)  
+
+<img src="assets/images/instructions.png">
 
 ### As a user, I want to be told when the two pokemon match
 
@@ -40,12 +50,16 @@
 
 - The game has had media queries included in its CSS, in order to look equally as appealing on multiple platforms. From desktop being the largest, to Apple Iphone 5S being the smallest.
 
+<img src="assets/images/usresponsive.png">
+
 ### As a user, I want to improve my hand eye co ordination and develop simple early ICT usage skills. 
 - Throughout the early years education documentation in the UK (Development Matters in the Early Years Foundation Stage), there are statements that encourage the development of technbology skills, and physical skills. This game covers goals such as "•Shows skill in making toys work by pressing parts or lifting
 flaps to achieve effects such as sound, movements or new images.", "•Completes a simple program on a computer.", "Children show good control and co-ordination in large and small movements.". This game is built with just some of these aspects in mind.
 
 ### As a user I want to be able to control audible effects (user asked for this after testing)
 - Added a mute option to sound effects
+
+<img src="assets/images/mute.png">
 
 ## Bugs
 
