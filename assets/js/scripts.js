@@ -22,16 +22,16 @@ var numberOfPokemon = 0;
 
 /*Sound variables*/
 var isMuted;
-var ballOpenSound = new Audio("./assets/sounds/SFX_BALL_POOF.wav");
-var ballCloseSound = new Audio("./assets/sounds/SFX_BALL_TOSS.wav");
-var matchingSound = new Audio("./assets/sounds/SFX_GET_ITEM_1.wav");
-var winSound = new Audio("./assets/sounds/SFX_LEVEL_UP.wav");
-var loseSound = new Audio("./assets/sounds/SFX_SHRINK.wav");
-var choose = new Audio("./assets/sounds/SFX_PRESS_AB.wav");
-var selected = new Audio("./assets/sounds/SFX_PURCHASE.wav");
-var denied = new Audio("./assets/sounds/SFX_DENIED.wav");
-var rulesOn = new Audio("./assets/sounds/SFX_TURN_ON_PC.wav");
-var rulesOff = new Audio("./assets/sounds/SFX_TURN_OFF_PC.wav");
+var ballOpenSound = new Audio("./assets/sounds/ballout.wav");
+var ballCloseSound = new Audio("./assets/sounds/ballin.wav");
+var matchingSound = new Audio("./assets/sounds/found.wav");
+var winSound = new Audio("./assets/sounds/level.wav");
+var loseSound = new Audio("./assets/sounds/lose.wav");
+var choose = new Audio("./assets/sounds/push.wav");
+var selected = new Audio("./assets/sounds/select.wav");
+var denied = new Audio("./assets/sounds/wrong.wav");
+var rulesOn = new Audio("./assets/sounds/switchon.wav");
+var rulesOff = new Audio("./assets/sounds/switchoff.wav");
 
 /* Character Arrays */
 const allPokemon = [{
@@ -162,15 +162,15 @@ function initialiseLevel(level) {
     switch (level) {
         case "pokeball":
             numberOfPokemon = 3;
-            levelPokeballImage = "Poké_Ball_Sprite.png";
+            levelPokeballImage = "pball.png";
             break;
         case "greatball":
             numberOfPokemon = 4;
-            levelPokeballImage = "Great_Ball_Sprite.png";
+            levelPokeballImage = "gball.png";
             break;
         case "masterball":
             numberOfPokemon = 6;
-            levelPokeballImage = "Master_Ball_Sprite.png";
+            levelPokeballImage = "mball.png";
             break;
     }
 
@@ -295,7 +295,7 @@ function initialiseLevel(level) {
 }
 
 /* Game start */
-$("#start").click(function() {
+$("#start").click(() => {
 
 
 
