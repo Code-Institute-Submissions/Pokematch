@@ -218,18 +218,16 @@ function initialiseLevel(level) {
 
         $(this).attr("src", currentPokemonImage);
 
-        console.log("Prev: " + previousPokemonName + "" + previouspokeballNumber + ", Curr: " + currentPokemonName + currentpokeballNumber);
+        
 
 
         if (previousPokemonName == null) {
             // if no previous, first in sequence
-            console.log("previousPokemonName is null");
             previousPokemonName = currentPokemonName;
             previouspokeballNumber = currentpokeballNumber;
             previousPokeballName = $(this).attr("id");
         } else if ((previousPokemonName == currentPokemonName) && (previouspokeballNumber != currentpokeballNumber)) {
             // match
-            console.log("previousPokemonName matches currentPokemonName");
             $("#" + previousPokeballName).data("matched", "true");
             $("#" + currentPokeballName).data("matched", "true");
 
@@ -240,7 +238,6 @@ function initialiseLevel(level) {
             $(this).show();
 
             allMatchedPokemon++;
-            console.log(allMatchedPokemon);
 
             previousPokemonName = null;
             previousPokeballName = null;
@@ -269,7 +266,6 @@ function initialiseLevel(level) {
         } else if (previousPokemonName != currentPokemonName) {
 
             //no match
-            console.log("previousPokemonName does not match currentPokemonName");
 
             $(".ball-match").attr("disabled", "disabled");
             ballOpenSound.pause();
@@ -277,7 +273,6 @@ function initialiseLevel(level) {
 
             let pokeballHideTimer = setInterval(function() {
                 clearInterval(pokeballHideTimer);
-                console.log("timer up");
 
                 $("#" + previousPokeballName).attr("src", "./assets/images/" + levelPokeballImage);
                 $("#" + currentPokeballName).attr("src", "./assets/images/" + levelPokeballImage);
@@ -334,7 +329,6 @@ $("#start").click(function() {
                 keyboard: false
             });
         } else {
-            console.log("Time: " + timeleft);
             $(".time-remaining").html(" " + timeleft + " ");
             document.getElementById("pokeProgressBar").value = 59 - timeleft;
             document.getElementById("greatProgressBar").value = 59 - timeleft;
@@ -354,7 +348,6 @@ function randomisePokemon(noOfPokemon) {
         allPokemon.slice()
     );
 
-    console.log(pokeballArray);
 
     return pokeballArray;
 
@@ -377,8 +370,6 @@ $(document).ready(function() {
         $(this).find("i").toggleClass("fa-volume-up fa-volume-mute");
 
         isMuted = $("#volume-up>i").attr("class") == "fas fa-volume-mute";
-
-        console.log("Muted: " + isMuted);
 
         ballOpenSound.muted = isMuted;
         ballCloseSound.muted = isMuted;
