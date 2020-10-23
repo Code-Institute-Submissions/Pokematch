@@ -63,7 +63,7 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 
 ### Ball doesn't always match Sound
 
-- Added a ballOpenSound and matchingSound on pause to prevent overlapping. 
+- Added a matchingSound and ballclose on pause to prevent overlapping. 
 
 ### By repeatedly clicking the same two pokemon that match, you can win without opening any other pokeballs. 
 

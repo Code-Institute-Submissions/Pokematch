@@ -200,8 +200,8 @@ function initialiseLevel(level) {
         if ($(this).data("matched") == "true") {
             return;
         }
+        ballCloseSound.pause();
         matchingSound.pause();
-        ballOpenSound.pause();
         ballOpenSound.play();
 
         $(this).effect("bounce", "slow");
