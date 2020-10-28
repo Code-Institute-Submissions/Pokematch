@@ -149,7 +149,9 @@ Colours have been chosen that reflect the pokemon logo, and some of the themes f
 
 ### Features to Implement
 
-Find a way to have music play on lose screen modal for mobile devices. 
+- A bug in the console says "# Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()." (# goes up incrementally when a new sound plays). 
+This requires full understanding of DOMException and unsynchronicity and synchronicity in audio.  Future understanding of this concept will allow it to be fixed, however 
+the game currently plays and audio works, so it is in a usable state. 
 
 ##### Back to [top](#table-of-contents)
 
