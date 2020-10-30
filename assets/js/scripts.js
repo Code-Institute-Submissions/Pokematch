@@ -150,7 +150,7 @@ function initialiseLevel(level) {
 	// assign pokemon titles (tooltips) to pokeballs - testing purposes only
 	for (let i = 0; i < randomisedPokemon.length; i++) {
 		var pokeballName = level + (i + 1);
-		$("#" + pokeballName).attr("title", randomisedPokemon[i].name);
+		
 		$("#" + pokeballName).data("pokemon-name", randomisedPokemon[i].name);
 		$("#" + pokeballName).data("pokeball-number", i + 1);
 		$("#" + pokeballName).data("pokemon-img", randomisedPokemon[i].img);
