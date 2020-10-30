@@ -42,7 +42,7 @@
 
 ### User Stories
 
-This game has been Created with young children in mind. (3-7 year olds)
+This game has been created specifically for young children. (3-7 year olds)
 
 - As a user, I want to have fun with a simple game
 
@@ -209,10 +209,7 @@ the game currently plays and audio works, so it is in a usable state.
 - JSHint
 
   - [JSHint javascript Validator](https://jshint.com/) 
- 
-### Chrome's DevTools Audit report
 
-To complete after bug testing 
 
 ### Testing Methods
 
@@ -238,7 +235,7 @@ For information on the testing, follow the link to the document [here](testing.m
     - [Pokematch repository](https://github.com/adam181189/Pokematch)
 3. Click on the code dropdown option and select download zip
 4. Create a new folder called Pokematch and unzip the files in that new folder
-5. Now install iis by going to run and typing in appwiz.cpl
+5. Now iis is required, this can be done by going to run and typing in appwiz.cpl
 6. Now click on turn windows features on or off
 7. scroll down to internet information services
 8. Open folder and open Web Management tools and tick IIS Management Console
