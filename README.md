@@ -82,8 +82,13 @@ This game has been Created with young children in mind. (3-7 year olds)
 ### Frameworks Used
 
 - [Bootstrap](https://getbootstrap.com/)
+- Bootstrap is an open source library with access to reusable bits of code for html, css and javascripts. 
+
 - [jQuery](https://jquery.com/)
-- [jQuery Ui](https://api.jqueryui.com/) (using for animations (pokemon shaking)
+- jQuery is an open source library that makes using javascript easier and quicker. It simplifies a variety of multiple lines of javascript code by putting it into a single line of jquery code. 
+
+- [jQuery UI](https://api.jqueryui.com/) 
+- jQuery UI is a user interface interactions which allows the user to control more aspects of their code, by building further upon jQuery (includes interactions, effects, widgets, and themes). This has been used in the project for the pokemon animations as they come out of the pokeballs and shake. 
 
 ### Typography
 
@@ -226,7 +231,22 @@ For information on the testing, follow the link to the document [here](testing.m
 
 ### Local Deployment
 
-- Local Deployment not required
+- *In order to locally deploy the website, the following was actioned (using Windows 10): 
+1. Navigate to GitHub repository:
+    - [adam181189 repository](https://github.com/adam181189?tab=repositories)
+2. Open the Pokematch repository:
+    - [Pokematch repository](https://github.com/adam181189/Pokematch)
+3. Click on the code dropdown option and select download zip
+4. Create a new folder called Pokematch and unzip the files in that new folder
+5. Now install iis by going to run and typing in appwiz.cpl
+6. Now click on turn windows features on or off
+7. scroll down to internet information services
+8. Open folder and open Web Management tools and tick IIS Management Console
+9. Go to This PC and click on the local disk that houses the operating system.
+10. Open folder called inetpub
+11. inside here find wwwroot
+12. Move your pokematch folder into this folder. 
+13. Go to the following link http://localhost/pokematch/index.html
 
 ### Remote Deployment
 
