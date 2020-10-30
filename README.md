@@ -95,6 +95,12 @@ I used the font recursive throughout my project as it looked most similar to the
 ### Colors
 
 Colours have been chosen that reflect the pokemon logo, and some of the themes from the popular series.
+- ![#fbcb04](https://via.placeholder.com/15/fbcb04/000000?text=+) `#fbcb04` Used throughout as Pokemon's Primary colour in the logo.
+- ![#3a6eb8](https://via.placeholder.com/15/3a6eb8/000000?text=+) `#3a6eb8` Used throughout as Pokemon's Secondary colour in the logo.
+- ![#ff1010](https://via.placeholder.com/15/ff1010/000000?text=+) `#ff1010` used to make the win page text stand out
+- ![#e9e799](https://via.placeholder.com/15/e9e799/000000?text=+) `#e9e799` used for the background of the win page as a soft warm colour for positivity. 
+- ![#25689d](https://via.placeholder.com/15/25689d/000000?text=+) `#25689d` used for the lose page text as this and the background colour fit cleanly together, but colder colours help emit sadness.
+- ![#c2cccf](https://via.placeholder.com/15/c2cccf/000000?text=+) `#c2cccf` used for the lose page background, as its a colder colour and stands nicely behind the text and image
 
 
 
@@ -164,14 +170,17 @@ the game currently plays and audio works, so it is in a usable state.
 - HTML
 
   - This project uses HTML to create the main functions of the website.
+  - [HTML](https://en.wikipedia.org/wiki/HTML)
 
 - CSS
 
   - This project uses CSS to override the Bootstrap elements and apply the determined styling
+  - [CSS](https://en.wikipedia.org/wiki/CSS)
 
 - Javascript
 
  - This project uses Javascript to create functions, rules and effects in order to make the game work as intended.
+ - [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
 
 ##### Back to [top](#table-of-contents)
