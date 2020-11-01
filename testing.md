@@ -75,6 +75,14 @@ flaps to achieve effects such as sound, movements or new images.", "•Completes
 
 - Fixed by changing the column bootstrap details as smaller sizes had been set to none. It now just stops at col across all platforms. 
 
+### issue in console DOMException: The play() request was interrupted
+
+- Fixed by adding a promise if statement which catches an error if two sounds play together to prevent conflicts. (https://developers.google.com/web/updates/2017/06/play-request-was-interrupted, this website helped solve the error)
+
+### Sounds not always playing when pokeballs are clicked
+
+- Fixed by adding switches and "sound.currentTime = 0" so all sounds pause except for the wanted sound when playSound function is called.
+
 ### By repeatedly clicking the same two pokemon that match, you can win without opening any other pokeballs. 
 
 - Corrected by adding an if statement to the first click that means it won't be clickable if the boolean in the previousPokemonName == currentPokemonName
