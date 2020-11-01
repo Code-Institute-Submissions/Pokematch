@@ -160,9 +160,7 @@ Colours have been chosen that reflect the pokemon logo, and some of the themes f
 
 ### Features to Implement
 
-- A bug in the console says "# Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause()." (# goes up incrementally when a new sound plays). 
-This requires full understanding of DOMException and unsynchronicity and synchronicity in audio.  Future understanding of this concept will allow it to be fixed, however 
-the game currently plays and audio works, so it is in a usable state. 
+- Update where clicking on anything that sends the player to the difficulty select page doesn't reset the entire game (such as mute needing to be reselected).
 
 ##### Back to [top](#table-of-contents)
 
