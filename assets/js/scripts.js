@@ -30,7 +30,72 @@ var rulesOn = new Audio("./assets/sounds/switchon.wav");
 var rulesOff = new Audio("./assets/sounds/switchoff.wav");
 
 function playSound(name) {
-    alert(name);
+
+	ballOpenSound.pause();
+	ballOpenSound.currentTime = 0;
+	ballCloseSound.pause();
+	ballCloseSound.currentTime = 0;
+	matchingSound.pause();
+	matchingSound.currentTime = 0;
+	winSound.pause();
+	winSound.currentTime = 0;
+	loseSound.pause();
+	loseSound.currentTime = 0;
+	choose.pause();
+	choose.currentTime = 0;
+	selected.pause();
+	selected.currentTime = 0;
+	denied.pause();
+	denied.currentTime = 0;
+	rulesOn.pause();
+	rulesOn.currentTime = 0;
+	rulesOff.pause();
+	rulesOff.currentTime = 0;
+
+	var playPromise;
+	switch (name){
+		case "ballOpenSound":
+			playPromise = ballOpenSound.play();
+			break;
+		case "ballCloseSound":
+			playPromise = ballCloseSound.play();
+			break;
+		case "matchingSound":
+			playPromise = matchingSound.play();
+			break;
+		case "winSound":
+			playPromise = winSound.play();
+			break;
+		case "loseSound":
+			loseSound.play();
+			break;
+		case "choose":
+			playPromise = choose.play();
+			break;
+		case "selected":
+			playPromise = selected.play();
+			break;
+		case "denied":
+			playPromise = denied.play();
+			break;
+		case "rulesOn":
+			playPromise = rulesOn.play();
+			break;
+		case "rulesOff":
+			playPromise = rulesOff.play();
+			break;
+		
+    }
+    /*
+    Used this to help remove the error in which DOMException: The play() request was interrupted came up on the console log
+    https://developers.google.com/web/updates/2017/06/play-request-was-interrupted */
+
+	if (playPromise !== undefined) {
+		playPromise.catch(error => {
+			// Error
+		});
+	}
+
 }
 
 /* Character Arrays */
@@ -63,9 +128,8 @@ $(".ball-levels").css("cursor", "pointer"); // iOS fix
 
 /* League difficulty */
 $(".ball-levels").click(function() {
-    $(".ball-levels").css("opacity", "50%");
-    playSound("choose");
-	choose.play();
+	$(".ball-levels").css("opacity", "50%");
+	playSound("choose");
 	$(this).css("opacity", "100%");
 	level = $(this).attr("id");
 });
@@ -87,38 +151,38 @@ window.onload = initialise;
 $("#rules").click(function() {
 	resetLevels();
 	document.getElementById("game-rules1").style.display = "block";
-	rulesOn.play();
+	playSound("rulesOn");
 });
 $("#next_button1").click(function() {
 	resetLevels();
 	document.getElementById("game-rules2").style.display = "block";
-	choose.play();
+	playSound("choose");
 });
 $("#next_button2").click(function() {
 	resetLevels();
 	document.getElementById("game-rules3").style.display = "block";
-	choose.play();
+	playSound("choose");
 });
 $("#next_button3").click(function() {
 	resetLevels();
 	document.getElementById("game-rules4").style.display = "block";
-	choose.play();
+	playSound("choose");
 });
 $("#next_button4").click(function() {
 	resetLevels();
 	document.getElementById("game-rules5").style.display = "block";
-	choose.play();
+	playSound("choose");
 });
 $("#finish_to_title").click(function() {
 	resetLevels();
 	document.getElementById("league-levels").style.display = "block";
-	rulesOff.play();
+	playSound("rulesOff");
 });
 $(".return-button").click(function() {
 	difficultySelect = undefined;
 	resetLevels();
 	document.getElementById("league-levels").style.display = "block";
-	choose.play();
+	playSound("choose");
 });
 
 /* Game mode difficulty initialiser */
@@ -155,7 +219,7 @@ function initialiseLevel(level) {
 	// assign pokemon titles (tooltips) to pokeballs - testing purposes only
 	for (let i = 0; i < randomisedPokemon.length; i++) {
 		var pokeballName = level + (i + 1);
-		
+		$("#" + pokeballName).attr("title", randomisedPokemon[i].name);
 		$("#" + pokeballName).data("pokemon-name", randomisedPokemon[i].name);
 		$("#" + pokeballName).data("pokeball-number", i + 1);
 		$("#" + pokeballName).data("pokemon-img", randomisedPokemon[i].img);
@@ -165,7 +229,7 @@ function initialiseLevel(level) {
 		if ($(this).data("matched") == "true") {
 			return;
 		}
-		ballOpenSound.play();
+		playSound("ballOpenSound");
 		$(this).effect("bounce", "slow");
 		var isDisabled = $(this).attr("disabled") == "disabled";
 		if (isDisabled) {
@@ -186,16 +250,15 @@ function initialiseLevel(level) {
 			$("#" + previousPokeballName).data("matched", "true");
 			$("#" + currentPokeballName).data("matched", "true");
 			$("#" + previousPokeballName).show();
-			matchingSound.play();
-			ballOpenSound.pause();
+			playSound("matchingSound");
 			$(this).show();
 			allMatchedPokemon++;
 			previousPokemonName = null;
 			previousPokeballName = null;
 			// Win condition     
 			if (allMatchedPokemon == numberOfPokemon) {
-				matchingSound.pause();
-				winSound.play();
+				
+				playSound("winSound");
 				$(".ball-match").attr("disabled", "disabled"); // disable all pokeballs
 				clearInterval(gameOverTimer); // stop timer
 				winTimer = setInterval(function() {
@@ -210,8 +273,7 @@ function initialiseLevel(level) {
 		} else if (previousPokemonName != currentPokemonName) {
 			//no match
 			$(".ball-match").attr("disabled", "disabled");
-			ballOpenSound.pause();
-			ballCloseSound.play();
+			playSound("ballCloseSound");
 			let pokeballHideTimer = setInterval(function() {
 				clearInterval(pokeballHideTimer);
 				$("#" + previousPokeballName).attr("src", "./assets/images/" + levelPokeballImage);
@@ -231,11 +293,11 @@ function initialiseLevel(level) {
 /* Game start */
 $("#start").click(() => {
 	if (level == null) {
-		denied.play();
+		playSound("denied");
 		alert("please select a difficulty");
 		return;
 	} else {
-		selected.play();
+		playSound("selected");
 		resetLevels();
 		initialiseLevel(level);
 	}
@@ -244,7 +306,7 @@ $("#start").click(() => {
 	let timeleft = 59;
 	gameOverTimer = setInterval(function() {
 		if (timeleft <= -1) {
-			loseSound.play();
+			playSound("loseSound");
 			clearInterval(gameOverTimer);
 			$(".time-remaining").html(" " + 60 + " ");
 			document.getElementById("pokeProgressBar").value = 0;
