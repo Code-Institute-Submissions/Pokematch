@@ -29,6 +29,10 @@ var denied = new Audio("./assets/sounds/wrong.wav");
 var rulesOn = new Audio("./assets/sounds/switchon.wav");
 var rulesOff = new Audio("./assets/sounds/switchoff.wav");
 
+function playSound(name) {
+    alert(name);
+}
+
 /* Character Arrays */
 const allPokemon = [{
 	name: "Pikachu",
@@ -59,7 +63,8 @@ $(".ball-levels").css("cursor", "pointer"); // iOS fix
 
 /* League difficulty */
 $(".ball-levels").click(function() {
-	$(".ball-levels").css("opacity", "50%");
+    $(".ball-levels").css("opacity", "50%");
+    playSound("choose");
 	choose.play();
 	$(this).css("opacity", "100%");
 	level = $(this).attr("id");
